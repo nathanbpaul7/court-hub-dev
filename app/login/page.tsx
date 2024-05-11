@@ -31,7 +31,7 @@ export default function LoginPage() {
         {registered && (
           <span className="inline p-2 text-blue-500 ">
             {' '}
-            You've successfully registered! Login below to get started.{' '}
+            You&apos;ve successfully registered! Login below to get started.{' '}
           </span>
         )}
         {registerFailFlag && (

@@ -26,7 +26,7 @@ export default function DashboardMessageUserSearch({
   useEffect(() => {
     inputRef.current?.focus();
     if (selected) handleSelectedUser(selected);
-  }, []);
+  }, [selected]);
 
   const filteredPeople =
     query === ''

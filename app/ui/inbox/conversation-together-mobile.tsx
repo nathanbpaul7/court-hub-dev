@@ -8,6 +8,7 @@ import {
 import { ChevronRightIcon } from '@heroicons/react/20/solid';
 import MessagesDialogModal from './messages-dialog-mobile';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface ModalStateTracking {
   [key: string]: boolean;
@@ -99,9 +100,11 @@ export default function ConversationsTogetherMobile({
               modalOpen={modalState[convo.id] || false}
               setModalState={setModalState}
             />
-            <img
+            <Image
               src={otherUserImageUrl}
               alt="profile"
+              height={60}
+              width={60}
               className="h-[60px] w-[60px] rounded-full "
             />
             <div className="ml-4 flex w-full flex-col justify-center gap-0.5">

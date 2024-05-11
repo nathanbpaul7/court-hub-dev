@@ -92,8 +92,8 @@ export default async function Page({
         </div>
         <div className="mt-4 flex flex-col items-center">
           <p className="pl-2 text-left ">
-            It looks like you don't have any messages yet. You can draft a new
-            message to connect with other players here or while browsing the{' '}
+            It looks like you don&apos;t have any messages yet. You can draft a
+            new message to connect with other players here or while browsing the{' '}
             <Link className="text-blue-600 underline" href="/dashboard">
               player directory
             </Link>

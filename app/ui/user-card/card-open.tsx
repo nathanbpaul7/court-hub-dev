@@ -11,6 +11,7 @@ import { SunIcon, UserIcon } from '@heroicons/react/24/outline';
 
 import { TennisBallIcon, TennisTravel, HomeIcon } from '../components';
 import { roboto } from '../fonts';
+import Image from 'next/image';
 
 export default function CardOpen({ userCard }: { userCard: DisplayCard }) {
   let homeCourt = userCard.home_court.toString();
@@ -29,7 +30,9 @@ export default function CardOpen({ userCard }: { userCard: DisplayCard }) {
       <div className="h-27 flex-row ">
         <div className="bg-highlight-green flex h-20 w-full flex-grow flex-row justify-start rounded-t-md">
           <div className="ml-6 mt-6 flex w-32">
-            <img
+            <Image
+              height={100}
+              width={100}
               src={userCard.image_url}
               alt="profile"
               className="h-28 w-28 rounded-full  ring-4 ring-white "

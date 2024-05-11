@@ -9,6 +9,7 @@ import {
 import { ColdIcon, ColdIconRed, WindyIcon, WindyIconRed } from '../components';
 import { useState } from 'react';
 import { CheckCircleIcon, XCircleIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 export default function EditCard({ userCard }: { userCard: DisplayCard }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,10 @@ export default function EditCard({ userCard }: { userCard: DisplayCard }) {
       <div className="h-27 mt-2  flex-row border-b border-gray-200 ">
         <div className="h-15 flex w-full flex-shrink flex-row justify-start">
           <div className="w-15 mb-6 ml-6 mr-1 mt-6 flex">
-            <img
+            <Image
               src={userCard.image_url}
+              height={58}
+              width={58}
               alt="profile"
               className="w-14.5 h-14.5 rounded-full "
             />

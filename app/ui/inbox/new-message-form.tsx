@@ -46,7 +46,7 @@ function NewMessageForm({
 
   useEffect(() => {
     if (scrollBottom) scrollBottom();
-  }, []);
+  });
 
   // Function to han
   return (

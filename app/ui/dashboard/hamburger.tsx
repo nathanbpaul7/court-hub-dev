@@ -1,7 +1,7 @@
 'use client';
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/20/solid';
+
 import { signOut } from 'next-auth/react';
 
 import {
@@ -15,12 +15,12 @@ import {
   ArrowRightOnRectangleIcon,
   Cog6ToothIcon,
 } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+
 import { CourtIcon } from '../components';
-import clsx from 'clsx';
-import { usePathname } from 'next/navigation';
+
 import NavLinks from './nav-links';
-import { POST } from '@/app/api/convos/route';
+
+import Image from 'next/image';
 
 export default function Hamburger({
   setModalOpen,
@@ -92,10 +92,12 @@ export default function Hamburger({
 
                 <div className="border-green-border flex h-[120px] w-full items-center border-b">
                   <div className="ml-6">
-                    <img
+                    <Image
+                      height={72}
+                      width={72}
                       src={userData.image_url}
                       alt="profile"
-                      className="h-[72px] w-[72px] rounded-full   "
+                      className="h-[72px] w-[72px] rounded-full"
                     />
                   </div>
                   <div className="ml-4 flex flex-col">

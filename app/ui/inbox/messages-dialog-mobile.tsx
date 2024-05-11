@@ -15,6 +15,7 @@ import MessageForm from './message-form';
 import { useRef } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { set } from 'zod';
+import Image from 'next/image';
 
 export default function MessagesDialogModal({
   convo,
@@ -139,9 +140,11 @@ export default function MessagesDialogModal({
                     <button className="" onClick={closeModal}>
                       <ArrowLeftIcon className="mr-3 h-6 w-5 text-gray-800" />
                     </button>
-                    <img
+                    <Image
                       src={otherUserImageUrl}
                       alt="profile"
+                      height={40}
+                      width={40}
                       className="mr-2 h-[40px] w-[40px] rounded-full "
                     />
                     <div className="flex h-full flex-col justify-center">
@@ -210,13 +213,15 @@ export default function MessagesDialogModal({
                             className="my-2 flex min-h-[100px]"
                             key={message.message_id}
                           >
-                            <img
+                            <Image
                               src={
                                 otherUserFlag
                                   ? otherUserImageUrl
                                   : userData.image_url
                               }
                               alt="sender-avatar"
+                              height={35}
+                              width={35}
                               className="mr-4 h-[35px] w-[35px] rounded-full"
                             />
                             <div className="flex w-full flex-col space-y-2">

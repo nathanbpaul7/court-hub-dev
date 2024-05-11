@@ -14,6 +14,7 @@ import { useRef } from 'react';
 import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import CardModalDesktop from '../user-card/card-display-message-desktop';
 import { set } from 'zod';
+import Image from 'next/image';
 
 export default function MessagesDisplayDesktop({
   convo,
@@ -84,8 +85,10 @@ export default function MessagesDisplayDesktop({
         className=" mb-2 flex h-[88px] items-center border-b-2 border-gray-300  px-4 py-8"
         key="header"
       >
-        <img
+        <Image
           src={otherUserImageUrl}
+          height={40}
+          width={40}
           alt="profile"
           className="mr-2 h-[40px] w-[40px] rounded-full "
         />
@@ -142,9 +145,11 @@ export default function MessagesDisplayDesktop({
                 </div>
               )}
               <div className="my-2 flex min-h-[100px]" key={message.message_id}>
-                <img
+                <Image
                   src={otherUserFlag ? otherUserImageUrl : userData.image_url}
                   alt="sender-avatar"
+                  height={35}
+                  width={35}
                   className="mr-4 h-[35px] w-[35px] rounded-full"
                 />
                 <div className="flex w-full flex-col space-y-2">

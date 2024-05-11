@@ -29,9 +29,10 @@ export default async function Page() {
               id="create-blurb"
               className=" p-2 text-sm leading-relaxed antialiased md:text-base md:leading-snug"
             >
-              In order to make connections with other players, you'll first need
-              to create your <span className="font-semibold">player card</span>.
-              Share info about your availability, play preferences, and more!
+              In order to make connections with other players, you&apos;ll first
+              need to create your{' '}
+              <span className="font-semibold">player card</span>. Share info
+              about your availability, play preferences, and more!
             </p>
             <div className="flex justify-center">
               <div className="mx-3 mb-4 mt-4 flex bg-gray-200 p-4">

@@ -74,7 +74,7 @@ export default function RegisterForm({
             Personal Information
           </h1>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            We'll only share your username with other players, never your
+            We&apos;ll only share your username with other players, never your
             personal information. Email will only be used for login
             authenticaiton
           </p>

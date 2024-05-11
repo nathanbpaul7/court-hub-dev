@@ -27,6 +27,7 @@ import {
   MessageData,
 } from '@/app/lib/definitions';
 import DashboardMessageDialog from '../dashboard/messaging/new-dashboard-message-modal';
+import Image from 'next/image';
 
 export default function Card({
   userCard,
@@ -59,8 +60,10 @@ export default function Card({
       <div className="h-27 flex-row ">
         <div className="bg-highlight-green flex h-20 w-full flex-grow flex-row justify-start rounded-t-md">
           <div className="ml-6 mt-6 flex w-32">
-            <img
+            <Image
               src={userCard.image_url}
+              height={112}
+              width={112}
               alt="profile"
               className="h-28 w-28 rounded-full  ring-4 ring-white "
             />

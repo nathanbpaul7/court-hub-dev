@@ -940,7 +940,7 @@ function TravelToggle({
       } relative inline-flex h-5 w-10 items-center rounded-full`}
     >
       <span className="sr-only">
-        I'm able to travel to other courts besides my home court to play
+        I&apos;m able to travel to other courts besides my home court to play
       </span>
       <span
         className={`${

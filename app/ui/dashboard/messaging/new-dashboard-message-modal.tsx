@@ -82,7 +82,7 @@ export default function DashboardMessageDialog({
       ) || { id: '' };
       setOtherUserId(otherUserId.id);
     }
-  }, [selectedUser]);
+  }, [selectedUser, allUsers]);
 
   let displayNewMessageConvo =
     foundConvo && foundMessages.length > 0 ? true : false;

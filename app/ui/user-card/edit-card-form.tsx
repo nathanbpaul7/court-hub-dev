@@ -607,8 +607,8 @@ export default function EditCardForm({
             Weather Tolerance
           </legend>
           <p className="mt-0 text-sm leading-6 text-gray-600">
-            Cold is considered below 50°F. It's okay if you don't like playing
-            in bad weather!
+            Cold is considered below 50°F. It&apos;s okay if you don&apos;t like
+            playing in bad weather!
           </p>
           <div className="mb-3 mt-3 space-y-6">
             <div className="gap-y-3 space-x-3 space-y-3">
@@ -752,8 +752,8 @@ function TravelToggle({
       } relative inline-flex h-5 w-10 items-center rounded-full`}
     >
       <span className="sr-only">
-        I'm willing and able to travel to other courts besides my home court to
-        play
+        I&apos;m willing and able to travel to other courts besides my home
+        court to play
       </span>
       <span
         className={`${

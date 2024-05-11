@@ -3,6 +3,7 @@ import { useState, useRef } from 'react';
 import { ConvoData, MessageData, SafeUser } from '@/app/lib/definitions';
 import NewMessageForm from './new-message-form';
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 export default function NewMessageConvoDisplay({
   convo,
@@ -109,9 +110,11 @@ export default function NewMessageConvoDisplay({
                 </div>
               )}
               <div className="my-1 flex min-h-[100px]" key={message.message_id}>
-                <img
+                <Image
                   src={otherUserFlag ? otherUserImageUrl : userData.image_url}
                   alt="sender-avatar"
+                  height={35}
+                  width={35}
                   className="mr-4 h-[35px] w-[35px] rounded-full"
                 />
                 <div className="flex flex-col space-y-2 ">
@@ -166,7 +169,9 @@ export default function NewMessageConvoDisplay({
                 </div>
               )}
               <div className="my-2 flex min-h-[100px]" key={message.message_id}>
-                <img
+                <Image
+                  height={35}
+                  width={35}
                   src={otherUserFlag ? otherUserImageUrl : userData.image_url}
                   alt="sender-avatar"
                   className="mr-4 h-[35px] w-[35px] rounded-full"

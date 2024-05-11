@@ -50,7 +50,7 @@ function DashboardNewMessageForm({
 
   useEffect(() => {
     if (scrollBottom) scrollBottom();
-  }, []);
+  }, [scrollBottom]);
 
   // Function to han
   return (

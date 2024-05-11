@@ -16,6 +16,7 @@ import SelfCardModal from '../user-card/self-card-modal';
 import { pusherClient } from '@/app/lib/pusher-client';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { BellAlertIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
 export default function SideNav({
   userData,
@@ -54,7 +55,7 @@ export default function SideNav({
     return () => {
       pusherClient.unsubscribe(userData.id);
     };
-  }, []);
+  });
 
   return (
     <div className="bg-green-logo fixed relative top-0 mb-1 flex h-20 w-full items-center justify-center ">
@@ -75,8 +76,10 @@ export default function SideNav({
         </div>
 
         <div className="relative ml-auto mr-6 hidden items-center rounded-full p-2 md:flex ">
-          <img
+          <Image
             src={userData.image_url}
+            width={40}
+            height={40}
             alt="profile"
             className="h-10 w-10 rounded-full ring-2 ring-white  "
           />

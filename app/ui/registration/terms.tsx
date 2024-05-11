@@ -59,11 +59,11 @@ export default function Terms() {
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">
-                      These terms and conditions ("Agreement") govern your use
-                      of the CourtHUB web application and related services
-                      (collectively referred to as the "Service"). By accessing
-                      or using the Service, you agree to be bound by this
-                      Agreement.
+                      These terms and conditions (&quot;Agreement&quot;) govern
+                      your use of the CourtHUB web application and related
+                      services (collectively referred to as the
+                      (&quot;Service&quot;). By accessing or using the Service,
+                      you agree to be bound by this Agreement.
                     </p>
                   </div>
                   <Disclosure as="div" className="mt-2">
@@ -85,8 +85,8 @@ export default function Terms() {
                             purposes and in accordance with this Agreement. You
                             will not use the Service to engage in any activity
                             that could harm, disrupt, or interfere with the
-                            operation of the Service or any other user's use of
-                            the Service.<br></br>
+                            operation of the Service or any other user&apos;s
+                            use of the Service.<br></br>
                             <b>User Accounts</b>
                             <br></br>
                             In order to use certain features of the Service, you
@@ -110,13 +110,14 @@ export default function Terms() {
                             towards other users.<br></br>
                             <b>Limitation of Liability</b>
                             <br></br>
-                            The Service is provided on an "as is" and "as
-                            available" basis. We make no warranties, express or
-                            implied, regarding the reliability, accuracy, or
-                            availability of the Service. In no event shall we be
-                            liable for any indirect, incidental, special, or
-                            consequential damages arising out of or in any way
-                            connected with your use of the Service.<br></br>
+                            The Service is provided on an &quot;as is&quot; and
+                            &quot;as available&quot; basis. We make no
+                            warranties, express or implied, regarding the
+                            reliability, accuracy, or availability of the
+                            Service. In no event shall we be liable for any
+                            indirect, incidental, special, or consequential
+                            damages arising out of or in any way connected with
+                            your use of the Service.<br></br>
                             <b>Indemnification</b>
                             <br></br>
                             You agree to indemnify and hold harmless [Your
@@ -148,7 +149,7 @@ export default function Terms() {
                             tailored to fit the specific features and
                             requirements of your web app, as well as the
                             relevant laws and regulations in your jurisdiction.
-                            It's recommended to consult with a legal
+                            It&apos;s recommended to consult with a legal
                             professional to ensure that your terms and
                             conditions agreement provides adequate protection
                             for your web app and its users.

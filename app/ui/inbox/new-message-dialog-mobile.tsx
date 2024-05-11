@@ -79,7 +79,7 @@ export default function NewMessageDialog({
       ) || { id: '' };
       setOtherUserId(otherUserId.id);
     }
-  }, [selectedUser]);
+  }, [selectedUser, allUsers]);
 
   let displayNewMessageConvo =
     foundConvo && foundMessages.length > 0 ? true : false;
