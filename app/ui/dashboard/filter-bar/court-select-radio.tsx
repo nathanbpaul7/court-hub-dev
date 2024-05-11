@@ -40,7 +40,7 @@ export default function CourtSelect() {
           <div className="space-y-2">
             {courtOptions.map((options) => (
               <RadioGroup.Option
-                key={options.option}
+                key={options.value}
                 value={options}
                 className={({ active, checked }) =>
                   `${
@@ -96,7 +96,7 @@ export default function CourtSelect() {
   );
 }
 
-function CheckIcon(props) {
+function CheckIcon(props: any) {
   return (
     <svg viewBox="0 0 24 24" fill="none" {...props}>
       <circle cx={12} cy={12} r={12} fill="#fff" opacity="0.2" />

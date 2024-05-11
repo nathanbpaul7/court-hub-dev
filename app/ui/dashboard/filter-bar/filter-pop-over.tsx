@@ -1,14 +1,12 @@
 import { Popover, Transition, Switch } from '@headlessui/react';
 import { ChangeEvent, Fragment } from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AdjustmentsHorizontalIcon } from '@heroicons/react/20/solid';
 import { XCircleIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
 import { ColdIcon, TennisTravel, WindyIcon } from '../../components';
 import { DisplayCard } from '@/app/lib/definitions';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
-import { set } from 'zod';
-import CourtSelect from './court-select-radio';
 
 export default function FilterPopover({ userCard }: { userCard: DisplayCard }) {
   const searchParams = useSearchParams();

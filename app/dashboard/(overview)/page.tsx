@@ -21,8 +21,8 @@ function filterCardsFunction(
   const anyCourtsSelected = Object.keys(filterObject).some(
     (key) => key === 'fdr' || key === 'fairmount' || key === 'poplar',
   );
-  let filteredCards = null;
-  let filterObjectFixed = null;
+  let filteredCards: DisplayCard[] = []; //@ts-ignore
+  let filterObjectFixed: any = {}; //@ts-ignore
   if (anyCourtsSelected) {
     filteredCards = cards.filter(
       (card) => {
@@ -67,7 +67,7 @@ function filterCardsFunction(
       return true; // If all key-value pairs match, return true
     });
   } else {
-    console.log('filteredCards:', filteredCards);
+    // console.log('filteredCards:', filteredCards);
     return filteredCards.filter((card) => {
       // Check if each key-value pair in the filter object exists in the card object
       for (const key in filterObjectFixed) {

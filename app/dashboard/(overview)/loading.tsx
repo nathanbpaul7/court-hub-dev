@@ -1,5 +1,4 @@
 import CardSkeletonBig from '@/app/ui/new-skeletons';
-import DashboardSkeleton, { UserCardSkeleton } from '@/app/ui/old-skeletons';
 
 export default function Loading() {
   return (

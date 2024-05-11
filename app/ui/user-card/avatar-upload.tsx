@@ -53,7 +53,7 @@ export default function AvatarUpload({
       {imageSrc && (
         <>
           <div className="justify-items items-center">
-            <img ref={imageRef} src={imageSrc} />
+            <img alt="avatar-image" ref={imageRef} src={imageSrc} />
           </div>
           <div className="">
             <button
