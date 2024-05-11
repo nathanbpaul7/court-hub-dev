@@ -1,0 +1,111 @@
+'use client';
+import { use, useState } from 'react';
+import Image from 'next/image';
+import CourtInfoTabs from './court-tab-display';
+
+export default function CourtInfoTotal({
+  homecourt,
+  playerCounts,
+}: {
+  homecourt: string;
+  playerCounts: { [key: string]: number };
+}) {
+  let homecourtIndex = 0;
+  if (homecourt === 'poplar') {
+    homecourtIndex = 0;
+  } else if (homecourt === 'fairmount') {
+    homecourtIndex = 1;
+  } else if (homecourt === 'fdr') {
+    homecourtIndex = 2;
+  }
+
+  const [selectedCourt, setSelectedCourt] = useState(homecourtIndex);
+  // handle how the court is selected by images on the map
+  const handleCourtClick = (event: React.MouseEvent<HTMLImageElement>) => {
+    const courtId = (event.target as HTMLImageElement).id;
+    let courtIndex = 0;
+    if (courtId === 'poplar') {
+      courtIndex = 0;
+    } else if (courtId === 'fairmount') {
+      courtIndex = 1;
+    } else if (courtId === 'fdr') {
+      courtIndex = 2;
+    }
+    setSelectedCourt(courtIndex);
+  };
+
+  return (
+    <div className=" flex h-[80vh] w-full flex-col items-center md:h-auto lg:flex-row  lg:items-start  lg:gap-8">
+      <div className=" bg-highlight-green hidden h-full flex-col rounded-2xl p-4 px-6 lg:flex  lg:justify-center">
+        <div className=" flex max-w-[500px] rounded-xl  p-4  text-left text-blue-600 ">
+          <h3 className="text-lg font-semibold md:text-xl ">
+            All Court Locations
+          </h3>
+        </div>
+        <div
+          id="phillymap"
+          className=" relative flex flex-col overflow-hidden rounded-2xl  "
+        >
+          <Image
+            src="/philly-map.png"
+            alt="Philly Court Map"
+            priority
+            width={500}
+            height={700}
+            className="h-auto w-auto flex-shrink-0 "
+          />
+          <Image
+            src="/tennis-ball.png"
+            id="poplar"
+            alt="Poplar Court"
+            width={35}
+            height={35}
+            onClick={handleCourtClick}
+            className={`ring-green-logo absolute right-[28%] top-[27.5%] flex-shrink-0 rounded-full shadow-xl ring-2 hover:ring-4 ${
+              selectedCourt === 0 ? 'ring-green-logo  ring-8' : ''
+            }`}
+          />
+          <Image
+            src="/tennis-ball.png"
+            alt="Fairmount Court"
+            id="fairmount"
+            width={35}
+            height={35}
+            onClick={handleCourtClick}
+            className={` ring-green-logo absolute left-[33.5%] top-[5.5%] flex-shrink-0 rounded-full shadow-xl ring-2
+            hover:ring-4 ${
+              selectedCourt === 1 ? 'ring-green-logo  ring-8' : ''
+            }`}
+          />
+          <Image
+            src="/tennis-ball.png"
+            alt="FDR Court"
+            id="fdr"
+            width={35}
+            height={35}
+            onClick={handleCourtClick}
+            className={`ring-green-logo absolute bottom-[3%] left-[42%] flex-shrink-0 rounded-full ring-2
+            hover:ring-4 ${
+              selectedCourt === 2 ? 'ring-green-logo  ring-8' : ''
+            }`}
+          />
+        </div>
+        <div className=" flex max-w-[500px] flex-col justify-center rounded-xl  p-4 text-blue-600 ">
+          <p className=" mt-4 break-words text-left ">
+            Court Hub is currently deployed to three court locations across
+            Philadelphia. Have a suggestion for a court community that could
+            benefit from Court Hub?{' '}
+            <a href="mailto:example@example.com" className=" underline ">
+              Reach out via email.
+            </a>
+          </p>
+        </div>
+      </div>
+      <CourtInfoTabs
+        setSelectedCourt={setSelectedCourt}
+        selectedCourt={selectedCourt}
+        playerCounts={playerCounts}
+      />
+    </div>
+  );
+}
