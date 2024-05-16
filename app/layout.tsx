@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Court HUB DEMO',
-    default: 'Court HUB DEMO',
+    template: '%s | Court Hub DEMO',
+    default: 'Court Hub DEMO',
   },
   description:
     'The official Court Hub dashboard built with Next.js App Router.',
