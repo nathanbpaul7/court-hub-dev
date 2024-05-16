@@ -138,7 +138,7 @@ export default function DashboardMessageDialog({
 
                     {displayNewMessageConvo && (
                       <NewMessageConvoDisplay
-                        convo={foundConvo}
+                        convo={foundConvo!}
                         messages={foundMessages}
                         userData={userData}
                         closeModal={closeModal}

@@ -132,7 +132,7 @@ export default function NewMessageDialog({
 
                     {displayNewMessageConvo && (
                       <NewMessageConvoDisplay
-                        convo={foundConvo}
+                        convo={foundConvo!}
                         messages={foundMessages}
                         userData={userData}
                         closeModal={closeModal}

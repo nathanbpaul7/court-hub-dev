@@ -1,13 +1,11 @@
 'use client';
-import { useState, Fragment } from 'react';
+import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import EditCardForm from './edit-card-form';
-import { PencilSquareIcon, XMarkIcon } from '@heroicons/react/24/outline';
+
+import { XMarkIcon } from '@heroicons/react/24/outline';
 import { DisplayCard } from '@/app/lib/definitions';
-import Card from './card';
-import EditCard from './user-edit-card';
+
 import CardOpen from './card-open';
-import { set } from 'ol/transform';
 
 export default function SelfCardModal({
   userCard,

@@ -42,7 +42,7 @@ export default function RegisterForm({
   const [userExistsFlag, setUserExistsFlag] = useState(false);
   const [emailExistsFlag, setEmailExistsFlag] = useState(false);
 
-  const handleUsernameChange = (event) => {
+  const handleUsernameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (userNames.includes(event.target.value)) {
       console.log('User exists');
       setUserExistsFlag(true);
@@ -51,7 +51,7 @@ export default function RegisterForm({
     }
   };
 
-  const handleEmailChange = (event) => {
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (emails.includes(event.target.value)) {
       setEmailExistsFlag(true);
       console.log('Email exists');
@@ -59,7 +59,7 @@ export default function RegisterForm({
       setEmailExistsFlag(false);
     }
   };
-  const handlePasswordChange = (event) => {
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.value.length < 8) {
       const passwordLabel = document.getElementById('password-label');
       passwordLabel!.innerHTML = 'must be at least 8 characters';

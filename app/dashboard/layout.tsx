@@ -1,7 +1,7 @@
 import SideNav from '@/app/ui/dashboard/topnav-final';
 import { fetchSafeUser, fetchUserCardData } from '../lib/data';
-import { SafeUser } from '../lib/definitions';
-import { signOut } from '@/auth';
+
+export const dynamic = 'force-dynamic';
 
 export default async function Layout({
   children,
@@ -11,7 +11,9 @@ export default async function Layout({
   let card = null;
   const userData = await fetchSafeUser();
   const cardCheck = await fetchUserCardData();
-
+  if (!cardCheck || !userData) {
+    throw new Error('unable to access user card data');
+  }
   if (cardCheck) {
     card = cardCheck;
   }
