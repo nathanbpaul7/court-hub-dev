@@ -3,7 +3,7 @@ import { signOut } from '@/auth';
 import { PowerIcon } from '@heroicons/react/24/outline';
 
 export default async function authOut() {
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault();
     await signOut();
   };

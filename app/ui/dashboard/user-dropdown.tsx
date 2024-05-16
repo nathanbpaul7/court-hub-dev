@@ -103,7 +103,6 @@ export default function UserDropdown({
                 <button
                   onClick={() => {
                     signOut();
-                    close();
                   }}
                   className={`${
                     active ? 'bg-green-logo text-white' : 'text-blue-600'

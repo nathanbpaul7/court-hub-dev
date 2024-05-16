@@ -11,8 +11,8 @@ export default async function Layout({
   let card = null;
   const userData = await fetchSafeUser();
   const cardCheck = await fetchUserCardData();
-  if (!cardCheck || !userData) {
-    throw new Error('unable to access user card data');
+  if (!userData) {
+    throw new Error('unable to access user account data');
   }
   if (cardCheck) {
     card = cardCheck;
