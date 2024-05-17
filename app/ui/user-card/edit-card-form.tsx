@@ -351,9 +351,15 @@ export default function EditCardForm({
                   <select
                     id="tourn_level"
                     name="tourn_level"
+                    defaultValue={userCard?.tourn_level}
                     className="block w-full max-w-xs rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   >
                     <option disabled>Select from options...</option>
+                    <option value={0}>n/a</option>
+                    <option value={1.0}>1.0</option>
+                    <option value={1.5}>1.5</option>
+                    <option value={2.0}>2.0</option>
+                    <option value={2.5}>2.5</option>
                     <option value={3.0}>3.0</option>
                     <option value={3.5}>3.5</option>
                     <option value={4.0}>4.0</option>

@@ -59,7 +59,7 @@ export default async function Page({
   // fetch all converstaion and message data for current user.
   const { convos, messages } = await fetchUserConvos(userData, 1);
   // if none available, display new user inbox welcome page
-  if (convos.length === 0 || messages.length === 0) {
+  if (convos.length === 0) {
     return (
       <div className="flex h-full w-full max-w-2xl flex-col overflow-hidden px-4">
         <div className=" mb-4 mt-2 flex items-center justify-between">
@@ -80,7 +80,7 @@ export default async function Page({
           <ConvoSkeleton />
         </div>
         <div className="relative mt-4 flex justify-center">
-          <span className="mb-4 whitespace-nowrap rounded-lg bg-blue-500 px-16 py-2 text-sm font-medium text-white  hover:bg-green-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <span className="bg-green-logo hover:text-highlight-green mb-4 whitespace-nowrap rounded-lg px-16 py-2 text-sm font-medium  text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             Draft new message
             <NewMessageDialog
               userData={userData}

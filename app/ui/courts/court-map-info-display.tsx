@@ -100,7 +100,7 @@ export default function CourtInfoTotal({
         </div>
         <div className=" flex max-w-[500px] flex-col justify-center rounded-xl  p-4 text-blue-600 ">
           <p className=" mt-4 break-words text-left ">
-            Court Hub is currently deployed to three court locations across
+            Court Hub is currently active at three court locations across
             Philadelphia. Have a suggestion for a court(s) in Philadelphia that
             could benefit from Court Hub?{' '}
             <a href="mailto:courthubinfo@gmail.com" className=" underline ">
