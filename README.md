@@ -4,11 +4,11 @@
 
 ## Description:
 
-Court Hub is a web app designed to foster and encourage connection amongst communities of tennis players at public tennis courts across Philadelphia.
+Court Hub is a web app designed to foster relationships between tennis players at public tennis courts across Philadelphia.
 
-Currently, there are multiple web apps that purport to plug players into Philadelphia tennis communities, but these options require users to pay a monthly fee to access their network. Additionally, these apps tend to create competitive atmospheres centered around tournament and league play, rather than more casual, social tennis activity.
+Currently, there are multiple web apps that purport to plug players into Philadelphia tennis communities, but these options require users to pay a monthly fee to access their network. Additionally, these apps tend to create competitive atmospheres centered around tournament and league play, rather than more casual, social tennis activity. 
 
-Court Hub aims to foster relationships between individuals who share availability, proximity to a given court, or level / preferred style of play. The app addresses the challenge many tennis enthusiasts face in finding compatible hitting partners whose schedules match their own by making it easy to specify user preferences, and then search or filter by them. Court Hub essentially provides a locally cached social network or directory for each court location, and simplifies the process of discovering and connecting with other players.
+Court Hub helps players browse for other individuals who share availability, proximity to a given court, or level / preferred style of play. The app addresses the challenge many tennis enthusiasts face in finding compatible hitting partners whose schedules match their own by making it easy to specify user preferences, and then search or filter by them. Court Hub essentially provides a locally cached social network or directory for each court location, and simplifies the process of discovering and connecting with other players.
 
 ## Features:
 
