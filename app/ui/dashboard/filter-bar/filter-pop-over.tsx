@@ -435,7 +435,7 @@ export default function FilterPopover({ userCard }: { userCard: DisplayCard }) {
                           <button
                             onClick={handleButtonClick}
                             id="fairmount"
-                            className="mt-2  flex items-center "
+                            className="mt-4  flex items-center "
                           >
                             <span
                               className={`border-green-logo relative ml-1 flex flex-grow cursor-pointer rounded-lg border-0.5 px-5 py-2  focus:outline-none ${
@@ -473,7 +473,7 @@ export default function FilterPopover({ userCard }: { userCard: DisplayCard }) {
                           <button
                             onClick={handleButtonClick}
                             id="fdr"
-                            className="mt-2 flex items-center justify-start"
+                            className="mt-4 flex items-center justify-start"
                           >
                             <span
                               className={`border-green-logo relative ml-1 flex flex-grow cursor-pointer rounded-lg border-0.5 px-5 py-2  focus:outline-none ${

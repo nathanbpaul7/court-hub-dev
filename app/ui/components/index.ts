@@ -10,3 +10,4 @@ export { default as HomeIcon } from './home.svg';
 export { default as TennisBallIcon } from './tennis-ball-mina.svg';
 export { default as CourtTestIcon } from './courttest.svg';
 export { default as TennisBallTestIcon } from './tennis-ball-FILLABLE.svg';
+export { default as TennisRacketIcon } from './tennis-racket.svg';

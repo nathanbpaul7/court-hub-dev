@@ -39,7 +39,7 @@ export default function DashboardMessageDialog({
   let [foundMessages, setFoundMessages] = useState<MessageData[]>([]);
   function handleSelectedUser(user: { id: number; name: string }) {
     setSelectedUser(user.name);
-    console.log('selected user: ', user);
+    // console.log('selected user: ', user);
     const foundConvo = convos.find((convo) => {
       // Specify the condition for finding a conversation that matches the criteria
       return (
@@ -111,7 +111,7 @@ export default function DashboardMessageDialog({
                 leaveFrom="translate-x-0"
                 leaveTo="translate-x-full"
               >
-                <Dialog.Panel className=" z-80 fixed h-full w-full transform rounded-2xl  bg-white text-left align-middle shadow-xl transition-all md:right-4 md:top-40 md:h-[70%] md:w-[calc(100vw-16rem)]  ">
+                <Dialog.Panel className=" z-80 fixed h-full w-full transform rounded-2xl bg-white  text-left align-middle shadow-xl transition-all  md:top-40 md:h-[70%] md:max-w-[600px]   ">
                   <div className="flex h-full w-full flex-col">
                     <div className="mt-4 flex h-[100px] flex-col  border-b-0.5 px-4">
                       <div className="flex w-full items-center justify-between">
@@ -145,13 +145,13 @@ export default function DashboardMessageDialog({
                       />
                     )}
                     {!displayNewMessageConvo && (
-                      <div className="flex h-full w-full flex-col items-center justify-between bg-white py-2">
+                      <div className="flex h-full w-full flex-col items-center justify-between  py-2">
                         <div className="flex h-full w-full flex-col items-center justify-center border-b bg-white">
                           <span className="text-gray-500">
                             Start a new conversation
                           </span>
                         </div>
-                        <div className="relative mb-4 mt-4 w-full flex-auto">
+                        <div className="relative mb-4 mt-4 w-full flex-auto rounded-2xl">
                           <DashboardNewMessageForm
                             convo_id="make-new"
                             user_id={userData.id}

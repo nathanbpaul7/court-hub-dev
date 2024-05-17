@@ -22,7 +22,7 @@ Court Hub aims to foster relationships between individuals who share availabilit
 
 **Messaging**: Court Hub offers a real-time chat feature that allows users to initiate one-on-one conversations with potential playing partners. Users can seamlessly communicate, coordinate, and schedule matches directly within the platform as they see fit.
 
-- This feature felt like the biggest challenge in my project because it presented a number of user flows to account for (new message, searching for pre-existing convos, real-time data validation across user sessions) that needed separate data fetching/seeding to accommodate. I achieved real-time chat updates by leveraging a WebSocket based app called Pusher.js. Message data and conversation data are stored in my PostgreSQL database. Because some of the chat features are ‘client-side only’ (a Next.js app router requirement for Headless UI modals and the like), I needed to use an API route to fetch more data, and set up my next-auth to export handlers for GET and POST requests.
+- This feature felt like the biggest challenge in my project because it presented a number of user flows to account for (new message, searching for pre-existing convos, real-time data validation across user sessions) that needed separate data fetching/seeding to accommodate. I achieved real-time chat updates by leveraging a WebSocket library/app called Pusher.js. Message data and conversation data are stored in my PostgreSQL database. Because some of the chat features are ‘client-side only’ (a Next.js app router requirement for Headless UI modals and the like), I needed to use an API route to fetch more data from the client-component.
 
 **Court Information**: Beyond player profiles, Court Hub provides essential information about local tennis courts, including location, amenities, availability, and seasonal availability notes. This comprehensive overview helps users make informed decisions about where and when to play, maximizing their court experience.
 
@@ -36,7 +36,7 @@ Court Hub aims to foster relationships between individuals who share availabilit
 
 ## Tech Stack:
 
-Court Hub is built using a range of technologies and frameworks, to which this developer is eternally grateful for their thorough documentation and learning resources! These include:
+Court Hub is built using a range of technologies and frameworks, to which this developer is eternally grateful for the thorough documentation and learning resources! These include:
 
 - **Next.js**: Leveraged for building responsive React components and providing server-side rendering capabilities, enabling a responsive and performant web application. Big shout out to the Next.js Dashboard App Tutorial, which was a huge learning resource for me as I began this project. Much of the data fetching and validation logic was based on their implementation in the tutorial.
 - **Tailwind CSS**: Used for styling components with utility classes, facilitating rapid development and customization of UI elements.

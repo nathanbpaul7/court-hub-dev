@@ -2,6 +2,7 @@
 import { use, useState } from 'react';
 import Image from 'next/image';
 import CourtInfoTabs from './court-tab-display';
+import { TennisRacketIcon } from '../components';
 
 export default function CourtInfoTotal({
   homecourt,
@@ -52,7 +53,7 @@ export default function CourtInfoTotal({
             priority
             width={500}
             height={700}
-            className="h-auto w-auto flex-shrink-0 "
+            className="h-auto w-auto  flex-shrink-0 "
           />
           <Image
             src="/tennis-ball.png"
@@ -61,10 +62,13 @@ export default function CourtInfoTotal({
             width={35}
             height={35}
             onClick={handleCourtClick}
-            className={`ring-green-logo absolute right-[28%] top-[27.5%] flex-shrink-0 rounded-full shadow-xl ring-2 hover:ring-4 ${
-              selectedCourt === 0 ? 'ring-green-logo  ring-8' : ''
+            className={`ring-green-logo absolute right-[28%] top-[27.5%] z-10 flex-shrink-0 rounded-full shadow-xl ring-2   ${
+              selectedCourt === 0 ? 'ring-highlight-logo ' : 'hover:ring-4'
             }`}
           />
+          {selectedCourt === 0 && (
+            <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute right-[18%] top-[23.25%] h-24 w-24 rotate-[270deg] transform   " />
+          )}
           <Image
             src="/tennis-ball.png"
             alt="Fairmount Court"
@@ -72,11 +76,12 @@ export default function CourtInfoTotal({
             width={35}
             height={35}
             onClick={handleCourtClick}
-            className={` ring-green-logo absolute left-[33.5%] top-[5.5%] flex-shrink-0 rounded-full shadow-xl ring-2
-            hover:ring-4 ${
-              selectedCourt === 1 ? 'ring-green-logo  ring-8' : ''
-            }`}
+            className={` ring-green-logo absolute left-[33.5%] top-[5.5%] z-10 flex-shrink-0 rounded-full shadow-xl ring-2 
+             ${selectedCourt === 1 ? 'ring-green-logo ' : 'hover:ring-4'}`}
           />
+          {selectedCourt === 1 && (
+            <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute left-[23%] top-[1.50%] h-24 w-24 rotate-[0deg] transform   " />
+          )}
           <Image
             src="/tennis-ball.png"
             alt="FDR Court"
@@ -84,18 +89,21 @@ export default function CourtInfoTotal({
             width={35}
             height={35}
             onClick={handleCourtClick}
-            className={`ring-green-logo absolute bottom-[3%] left-[42%] flex-shrink-0 rounded-full ring-2
+            className={`ring-green-logo absolute bottom-[3%] left-[42%] z-10 flex-shrink-0 rounded-full ring-2 
             hover:ring-4 ${
-              selectedCourt === 2 ? 'ring-green-logo  ring-8' : ''
+              selectedCourt === 2 ? 'ring-green-logo ' : 'hover:ring-4'
             }`}
           />
+          {selectedCourt === 2 && (
+            <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute left-[37.9%] top-[79.8%] h-24 w-24 rotate-[180deg] transform   " />
+          )}
         </div>
         <div className=" flex max-w-[500px] flex-col justify-center rounded-xl  p-4 text-blue-600 ">
           <p className=" mt-4 break-words text-left ">
             Court Hub is currently deployed to three court locations across
-            Philadelphia. Have a suggestion for a court community that could
-            benefit from Court Hub?{' '}
-            <a href="mailto:example@example.com" className=" underline ">
+            Philadelphia. Have a suggestion for a court(s) in Philadelphia that
+            could benefit from Court Hub?{' '}
+            <a href="mailto:courthubinfo@gmail.com" className=" underline ">
               Reach out via email.
             </a>
           </p>

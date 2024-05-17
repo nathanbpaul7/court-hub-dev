@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import NavLinks from '@/app/ui/dashboard/nav-links';
 import ChubLogo from '@/app/ui/chub-logo';
-import { signOut } from '@/auth';
 
 import Hamburger from './hamburger';
 import { DisplayCard, SafeUser } from '@/app/lib/definitions';
@@ -15,7 +14,6 @@ import EditCardFormModal from '../user-card/edit-card-form-modal';
 import SelfCardModal from '../user-card/self-card-modal';
 import { pusherClient } from '@/app/lib/pusher-client';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-import { BellAlertIcon } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
 export default function SideNav({

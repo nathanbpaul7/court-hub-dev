@@ -392,8 +392,8 @@ export default function NewCardForm({
                 width={35}
                 height={35}
                 onClick={handleCourtClick}
-                className={`absolute right-[28%] top-[27.5%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                  selectedCourt === 'poplar' ? 'ring-4 ring-green-100' : ''
+                className={`ring-green-logo absolute right-[28%] top-[27.5%] flex-shrink-0 rounded-full hover:ring-4 ${
+                  selectedCourt === 'poplar' ? 'ring-green-logo ring-4' : ''
                 }`}
               />
               <Image
@@ -403,8 +403,8 @@ export default function NewCardForm({
                 width={35}
                 height={35}
                 onClick={handleCourtClick}
-                className={`absolute left-[33.5%] top-[5.5%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                  selectedCourt === 'fairmount' ? 'ring-4 ring-green-100' : ''
+                className={`ring-green-logo absolute left-[33.5%] top-[5.5%] flex-shrink-0 rounded-full hover:ring-4 ${
+                  selectedCourt === 'fairmount' ? 'ring-green-logo ring-4' : ''
                 }`}
               />
               <Image
@@ -414,8 +414,8 @@ export default function NewCardForm({
                 width={35}
                 height={35}
                 onClick={handleCourtClick}
-                className={`absolute bottom-[3%] left-[42%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                  selectedCourt === 'fdr' ? 'ring-4 ring-green-100' : ''
+                className={`ring-green-logo absolute bottom-[3%] left-[42%] flex-shrink-0 rounded-full hover:ring-4 ${
+                  selectedCourt === 'fdr' ? 'ring-green-logo ring-4' : ''
                 }`}
               />
             </div>

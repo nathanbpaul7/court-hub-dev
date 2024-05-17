@@ -54,7 +54,7 @@ function DashboardNewMessageForm({
 
   // Function to han
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <form action={dispatch} onSubmit={handleSubmit} className="">
         <div className="flex flex-grow items-center justify-between overflow-y-hidden ">
           <input type="hidden" name="convo_id" value={convo_id} />
@@ -94,7 +94,7 @@ function SubmitButton() {
       className="mr-8 rounded-md py-2 text-white focus:outline-none active:outline-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
       aria-disabled={pending}
     >
-      <div className="flex rounded-full bg-blue-600 p-2">
+      <div className="bg-green-logo flex rounded-full p-2">
         <Paperoutline className="h-5 w-5 -rotate-45 " />
       </div>
     </button>

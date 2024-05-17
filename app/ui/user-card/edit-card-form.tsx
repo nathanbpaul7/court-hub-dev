@@ -16,6 +16,7 @@ import { DisplayCard } from '@/app/lib/definitions';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import HomeCourtSelect from './home-court-radio';
+import { TennisRacketIcon } from '../components';
 
 type NewCardFormProps = {
   username: string;
@@ -412,10 +413,13 @@ export default function EditCardForm({
               width={35}
               height={35}
               onClick={handleCourtClick}
-              className={`absolute right-[28%] top-[27.5%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                selectedCourt === 'poplar' ? 'ring-4 ring-green-100' : ''
+              className={`ring-green-logo absolute right-[28%] top-[27.5%] z-10 flex-shrink-0 rounded-full shadow-xl ring-2  hover:ring-4 ${
+                selectedCourt === 'poplar' ? 'ring-highlight-logo  ' : ''
               }`}
             />
+            {selectedCourt === 'poplar' && (
+              <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute right-[18%] top-[23.25%] h-24 w-24 rotate-[270deg] transform   " />
+            )}
             <Image
               src="/tennis-ball.png"
               alt="Fairmount Court"
@@ -423,10 +427,14 @@ export default function EditCardForm({
               width={35}
               height={35}
               onClick={handleCourtClick}
-              className={`absolute left-[33.5%] top-[5.5%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                selectedCourt === 'fairmount' ? 'ring-4 ring-green-100' : ''
-              }`}
+              className={` ring-green-logo absolute left-[33.5%] top-[5.5%] z-10 flex-shrink-0 rounded-full shadow-xl ring-2 
+            hover:ring-4 ${
+              selectedCourt === 'fairmount' ? 'ring-green-logo ' : ''
+            }`}
             />
+            {selectedCourt === 'fairmount' && (
+              <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute left-[23%] top-[1.50%] h-24 w-24 rotate-[0deg] transform   " />
+            )}
             <Image
               src="/tennis-ball.png"
               alt="FDR Court"
@@ -434,10 +442,12 @@ export default function EditCardForm({
               width={35}
               height={35}
               onClick={handleCourtClick}
-              className={`absolute bottom-[3%] left-[42%] flex-shrink-0 rounded-full ring-green-100 hover:ring-4 ${
-                selectedCourt === 'fdr' ? 'ring-4 ring-green-100' : ''
-              }`}
+              className={`ring-green-logo absolute bottom-[3%] left-[42%] z-10 flex-shrink-0 rounded-full ring-2 
+            hover:ring-4 ${selectedCourt === 'fdr' ? 'ring-green-logo ' : ''}`}
             />
+            {selectedCourt === 'fdr' && (
+              <TennisRacketIcon className="stroke-green-logo fill-green-logo absolute left-[37.5%] top-[79.5%] h-24 w-24 rotate-[180deg] transform   " />
+            )}
           </div>
           <HomeCourtSelect
             setSelectedCourt={setSelectedCourt}
