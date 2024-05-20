@@ -2,8 +2,6 @@
 
 import { PaperAirplaneIcon as Paperoutline } from '@heroicons/react/24/outline';
 import { useFormStatus } from 'react-dom';
-import { forwardRef } from 'react';
-import { useImperativeHandle } from 'react';
 
 import React, { useState, useRef, useEffect } from 'react';
 import { useFormState } from 'react-dom';
@@ -30,6 +28,13 @@ function NewMessageForm({
   const [messageText, setMessageText] = useState('');
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+      event.preventDefault();
+      event.currentTarget.form?.requestSubmit();
+    }
+  };
+
   const handleSubmit = () => {
     setMessageText('');
     closeModal();
@@ -37,33 +42,52 @@ function NewMessageForm({
   const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
 
   useEffect(() => {
-    if (textAreaRef.current) {
-      textAreaRef.current.focus();
-      textAreaRef.current.style.height = 'auto';
-      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
-    }
+    setTimeout(() => {
+      if (textAreaRef.current) {
+        textAreaRef.current.focus();
+        textAreaRef.current.style.height = 'auto';
+        textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+      }
+    }, 0);
   }, [textAreaRef.current?.value]);
 
-  useEffect(() => {
-    if (scrollBottom) scrollBottom();
-  });
-
-  // Function to han
   return (
     <div className="flex flex-col">
       <form action={dispatch} onSubmit={handleSubmit} className="">
         <div className="flex flex-grow items-center justify-between overflow-y-hidden ">
-          <input type="hidden" name="convo_id" value={convo_id} />
-          <input type="hidden" name="sender_id" value={user_id} />
-          <input type="hidden" name="recipient_id" value={other_user_id} />
-          <input type="hidden" name="message" value={messageText} />
+          <input type="hidden" name="convo_id" id="convo_id" value={convo_id} />
+          <input
+            type="hidden"
+            name="sender_id"
+            id="sender_id"
+            value={user_id}
+          />
+          <input
+            type="hidden"
+            name="recipient_id"
+            id="recipient_id"
+            value={other_user_id}
+          />
+          <input
+            type="hidden"
+            name="message"
+            id="message"
+            value={messageText}
+          />
           <textarea
             ref={textAreaRef}
             placeholder="Type a message..."
+            name="message-content"
+            id="message-content"
             rows={2}
             maxLength={500}
             onChange={(e) => {
               setMessageText(e.target.value);
+            }}
+            onKeyUp={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+              }
             }}
             value={messageText}
             className=" ml-8 h-full  w-[80%]  border-none p-2 text-sm focus:outline-white focus:ring-white"
@@ -84,6 +108,7 @@ function SubmitButton() {
       type="submit"
       className="mr-8 rounded-md py-2 text-white focus:outline-none active:outline-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
       aria-disabled={pending}
+      id="submit-button"
     >
       <div className="flex rounded-full bg-blue-600 p-2">
         <Paperoutline className="h-5 w-5 -rotate-45 " />

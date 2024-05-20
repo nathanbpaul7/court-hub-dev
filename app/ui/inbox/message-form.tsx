@@ -30,6 +30,13 @@ function MessageForm({
     scrollBottom();
   };
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      event.currentTarget.form?.requestSubmit();
+    }
+  };
+
   useEffect(() => {
     textAreaRef.current?.focus();
   }, [messageText]);
@@ -50,6 +57,8 @@ function MessageForm({
           ref={textAreaRef}
           placeholder="Type a message..."
           rows={2}
+          required
+          onKeyDown={handleKeyDown}
           onChange={(e) => {
             setMessageText(e.target.value);
           }}
