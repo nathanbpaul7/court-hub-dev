@@ -29,7 +29,7 @@ function NewMessageForm({
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (event.key === 'Enter' && (event.ctrlKey || event.metaKey)) {
+    if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
       event.currentTarget.form?.requestSubmit();
     }
@@ -79,6 +79,7 @@ function NewMessageForm({
             placeholder="Type a message..."
             name="message-content"
             id="message-content"
+            onKeyDown={handleKeyDown}
             rows={2}
             maxLength={500}
             onChange={(e) => {
@@ -90,7 +91,7 @@ function NewMessageForm({
               }
             }}
             value={messageText}
-            className=" ml-8 h-full  w-[80%]  border-none p-2 text-sm focus:outline-white focus:ring-white"
+            className=" ml-8 h-full  w-[80%]  border-none p-2  focus:outline-white focus:ring-white"
           />
 
           <SubmitButton />

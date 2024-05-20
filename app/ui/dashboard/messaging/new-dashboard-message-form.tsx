@@ -75,7 +75,7 @@ function DashboardNewMessageForm({
               setMessageText(e.target.value);
             }}
             value={messageText}
-            className=" ml-8 h-full  w-[80%]  border-none p-2 text-sm focus:outline-white focus:ring-white"
+            className=" ml-8 h-full  w-[80%]  border-none p-2  focus:outline-white focus:ring-white"
           />
 
           <SubmitButton />
