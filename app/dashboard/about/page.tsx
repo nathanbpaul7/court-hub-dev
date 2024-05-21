@@ -8,20 +8,20 @@ export default function Page() {
           <h2 className="mb-4 text-3xl font-bold">About</h2>
           <p className=" mb-8 text-lg text-gray-700">
             Welcome to Court Hub, on online platform for connecting with other
-            tennis players at public courts across Philadelphia. Whether you're
-            a seasoned player, burgeoning addict, or just starting out, Court
-            Hub makes it easy to find and connect with other players in your
-            "home" court community and beyond.
+            tennis players at public courts across Philadelphia. Whether
+            you&apos;re a seasoned player, burgeoning addict, or just starting
+            out, Court Hub makes it easy to find and connect with other players
+            in your &quot;home&quot; court community (and beyond).
           </p>
           <div className="bg-green-badge  p-8">
             <h3 className="mb-2 text-2xl font-bold ">Our Mission</h3>
             <p className="text-lg text-gray-600">
               At Court Hub, our mission is to help tennis players meet other
-              tennis players. It is a tool at the service of Philly's growing
-              tennis community. We believe that tennis should be a social and
-              enjoyable experience for everyone, and our platform is designed to
-              help players of all levels and experience meet other players who
-              share their preferences and availability.
+              tennis players. It is a tool at the service of Philly&apos;s
+              growing tennis community. We believe that tennis should be a
+              social and enjoyable experience for everyone. Our platform is
+              designed to help players of all levels and experience meet other
+              players who share their preferences and availability.
             </p>
           </div>
         </div>
@@ -71,10 +71,10 @@ export default function Page() {
         </p>
         <span className="font-bold">Free Membership</span> Court Hub is free for
         all users, with no membership fees.
-        <span className="font-bold">Community Focus</span> We're focused on
+        <span className="font-bold">Community Focus</span> We&apos;re focused on
         connecting players at local courts and fostering a friendly tennis
         community, rather than solely on competitive league or tournament play--
-        though we have nothing against competing if that's what you're
+        though we have nothing against competing if that&apos;s what you&apos;re
         interested in!
         <span className="font-bold">Invite Only</span> Our platform creates a
         trustworthy community of tennis players because it relies on peer
