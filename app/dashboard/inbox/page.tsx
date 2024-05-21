@@ -149,17 +149,19 @@ export default async function Page({
         id="conversations-desktop"
         className=" hidden w-full flex-col gap-4 overflow-y-hidden xl:flex xl:h-auto"
       >
-        <ConversationsTogetherDesktop
-          convos={searchedConvos}
-          messages={messages}
-          userData={userData}
-          otherUserCards={otherUserCards}
-          chatOpenById={display_convo_id}
-        />
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">
             <span className="absolute top-10">No conversations found</span>
           </div>
+        )}
+        {!searchFlagNone && (
+          <ConversationsTogetherDesktop
+            convos={searchedConvos}
+            messages={messages}
+            userData={userData}
+            otherUserCards={otherUserCards}
+            chatOpenById={display_convo_id}
+          />
         )}
       </div>
       <div
@@ -175,7 +177,9 @@ export default async function Page({
         />
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">
-            <span className="absolute top-10">No conversations found</span>
+            <span className="absolute top-10 text-blue-600">
+              No conversations found
+            </span>
           </div>
         )}
       </div>
