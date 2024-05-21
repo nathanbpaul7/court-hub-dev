@@ -65,7 +65,7 @@ export default function Page() {
       </div>
 
       <div className="mb-8 flex flex-col space-y-4">
-        <h3 className="mb-2 text-2xl font-bold">How We're Different</h3>
+        <h3 className="mb-2 text-2xl font-bold">How We&apos;re Different</h3>
         <p className="text-lg text-gray-700">
           Unlike other platforms, Court Hub offers:
         </p>
