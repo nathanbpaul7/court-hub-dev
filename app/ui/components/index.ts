@@ -11,3 +11,6 @@ export { default as TennisBallIcon } from './tennis-ball-mina.svg';
 export { default as CourtTestIcon } from './courttest.svg';
 export { default as TennisBallTestIcon } from './tennis-ball-FILLABLE.svg';
 export { default as TennisRacketIcon } from './tennis-racket.svg';
+export { default as OneIcon } from './1.svg';
+export { default as TwoIcon } from './2.svg';
+export { default as ThreeIcon } from './3.svg';

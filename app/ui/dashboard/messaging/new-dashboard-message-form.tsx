@@ -52,6 +52,13 @@ function DashboardNewMessageForm({
     if (scrollBottom) scrollBottom();
   }, [scrollBottom]);
 
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === 'Enter' && !event.shiftKey) {
+      event.preventDefault();
+      event.currentTarget.form?.requestSubmit();
+    }
+  };
+
   // Function to han
   return (
     <div className="flex flex-col ">
@@ -71,6 +78,7 @@ function DashboardNewMessageForm({
             placeholder="Type a message..."
             rows={2}
             maxLength={500}
+            onKeyDown={handleKeyDown}
             onChange={(e) => {
               setMessageText(e.target.value);
             }}

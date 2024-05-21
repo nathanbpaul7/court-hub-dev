@@ -24,7 +24,7 @@ export default function CardModal({ userCard }: { userCard: DisplayCard }) {
         <button
           type="button"
           onClick={openModal}
-          className="whitespace-nowrap rounded-lg bg-blue-600 px-3 pb-0.5 font-medium text-white  hover:text-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className="bg-green-logo whitespace-nowrap rounded-lg px-3 pb-0.5 font-medium text-white  hover:text-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
           <span className="text-xs">View player card</span>
         </button>

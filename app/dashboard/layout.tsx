@@ -18,15 +18,35 @@ export default async function Layout({
     card = cardCheck;
   }
   return (
-    <div className="flex flex-col items-center ">
+    <div className="relative flex flex-col items-center overflow-hidden ">
       <div className="flex w-full ">
         <SideNav userData={userData} card={card} />
       </div>
       <div
         id="pageroot"
-        className="flex h-screen w-full justify-center overflow-y-scroll "
+        className="flex h-screen w-full justify-center overflow-hidden  "
       >
         {children}
+      </div>
+      <div className="bg-green-logo flex h-40 w-full justify-center p-4 text-white ">
+        <div className=" grid w-full grid-cols-2 items-center space-y-4 text-center">
+          <div className="flex h-full w-full items-center justify-center">
+            <span>
+              <h2>
+                © Court Hub 2024, developed by Nathan Paul for CS50x final
+                project
+              </h2>
+            </span>
+          </div>
+          <div className="flex h-full w-full items-center justify-center border-l border-white">
+            <span>
+              <h2>Accesibility info</h2>
+              <h2>Privacy Policy</h2>
+              <h2>Terms of Service</h2>
+              <h2>Contact / Support</h2>
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

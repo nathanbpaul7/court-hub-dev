@@ -10,7 +10,7 @@ export default function Page() {
       <p>Some kind of error with inbox</p>
       <Link
         href="/dashboard"
-        className="mt-4 rounded-md bg-blue-600 px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
+        className="bg-green-logo mt-4 rounded-md px-4 py-2 text-sm text-white transition-colors hover:bg-blue-400"
       >
         Go Back
       </Link>

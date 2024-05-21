@@ -253,7 +253,7 @@ export default async function Page({
           </div>
         </div>
         {!searchFlag && !filterFlag && (
-          <div className="grid h-[70vh] min-w-[343px]  grid-cols-1 items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden  lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
+          <div className="grid h-[80vh] min-w-[343px]  grid-cols-1 items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden  lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
             <Suspense fallback={<CardSkeletonBig />}>
               <CardsGrid
                 convos={convos}
@@ -266,7 +266,7 @@ export default async function Page({
           </div>
         )}
         {searchFlag && searchNoneFlag && !filterFlag && (
-          <div className="grid h-[70vh] min-w-[343px] grid-cols-1 items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
+          <div className="grid h-[80vh] min-w-[343px] grid-cols-1 items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
             <div className="flex-col-2 relative flex items-start">
               <CardSkeletonBig />
             </div>
@@ -274,7 +274,7 @@ export default async function Page({
           </div>
         )}
         {searchFlag && !searchNoneFlag && !filterFlag && (
-          <div className="grid h-[70vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
+          <div className="grid h-[80vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
             <Suspense fallback={<CardSkeletonBig />}>
               <CardsGrid
                 convos={convos}
@@ -287,7 +287,7 @@ export default async function Page({
           </div>
         )}
         {filterFlag && filterNoneFlag && (
-          <div className="grid h-[70vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
+          <div className="grid h-[80vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
             <div className="flex-col-2 relative flex items-start">
               <CardSkeletonBig />
             </div>
@@ -295,7 +295,7 @@ export default async function Page({
           </div>
         )}
         {filterFlag && !filterNoneFlag && (
-          <div className="grid h-[70vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
+          <div className="grid h-[80vh] min-w-[343px] grid-cols-1  items-start justify-items-center gap-y-2 overflow-x-auto p-2 sm:overflow-x-hidden sm:p-4 md:h-[80vh] lg:mt-2 lg:min-w-[500px] lg:grid-cols-2   lg:gap-x-4">
             <Suspense fallback={<CardSkeletonBig />}>
               <CardsGrid
                 convos={convos}

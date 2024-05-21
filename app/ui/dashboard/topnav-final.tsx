@@ -56,7 +56,7 @@ export default function SideNav({
   });
 
   return (
-    <div className="bg-green-logo fixed relative top-0 mb-1 flex h-20 w-full items-center justify-center ">
+    <div className="bg-green-logo fixed absolute relative  top-0  flex h-20 w-full items-center justify-center ">
       <div
         id="navbar-content"
         className="md:justify-between-none flex h-full  w-full max-w-[1150px] items-center justify-between"
