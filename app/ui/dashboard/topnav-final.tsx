@@ -41,6 +41,7 @@ export default function SideNav({
   }, [modalOpen, cardIsOpen]);
 
   useEffect(() => {
+    console.log(pathname);
     pusherClient.subscribe(userData.id);
     pusherClient.bind('new-message', function (data: any) {
       setNewMessage(true);

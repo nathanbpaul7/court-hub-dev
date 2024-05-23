@@ -38,7 +38,7 @@ export default function AvatarUpload({
 
   const handleCrop = () => {
     if (cropper) {
-      const canvas = cropper.getCroppedCanvas({ width: 100, height: 100 });
+      const canvas = cropper.getCroppedCanvas({ width: 500, height: 500 });
       canvas.toBlob((blob) => {
         onCrop(blob);
       });
