@@ -16,9 +16,9 @@ export default function Page() {
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <p className={` text-xl text-gray-800 md:text-xl md:leading-normal`}>
             <strong>Welcome to Court Hub.</strong> This is a web app developed
-            by Nathan Paul for the Harvard/edX 2024{' '}
+            by Nathan Paul for the Harvard/edX 2024 CS50 Final Project using the
             <a href="https://nextjs.org/learn/" className="text-blue-500">
-              CS50 Final Project
+              Next.js App Router.
             </a>
             . <br /> <br />
             Court Hub is a platform that allows users to connect with tennis

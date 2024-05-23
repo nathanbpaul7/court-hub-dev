@@ -325,6 +325,7 @@ export default function EditCardForm({
                   <select
                     id="self_level"
                     name="self_level"
+                    defaultValue={userCard?.self_level}
                     className="block w-full max-w-xs rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   >
                     <option disabled>Take your best guess...</option>
@@ -379,6 +380,7 @@ export default function EditCardForm({
                 <div className="">
                   <select
                     id="years_xp"
+                    defaultValue={userCard?.years_xp}
                     name="years_xp"
                     className="block w-full max-w-xs rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-500 sm:text-sm sm:leading-6"
                   >

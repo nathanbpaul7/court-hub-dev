@@ -25,7 +25,7 @@ export default function CardOpen({ userCard }: { userCard: DisplayCard }) {
   return (
     <div
       id="triplediv"
-      className="grid w-full min-w-[343px] grid-cols-1 rounded-lg border-2 border-gray-200 bg-white font-sans antialiased "
+      className="grid h-full w-full min-w-[343px] grid-cols-1 rounded-lg border-2 border-gray-200 bg-white font-sans antialiased "
     >
       <div className="h-27 flex-row ">
         <div className="bg-highlight-green flex h-20 w-full flex-grow flex-row justify-start rounded-t-md">
