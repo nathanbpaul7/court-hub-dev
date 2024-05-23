@@ -16,7 +16,7 @@ export default function Page() {
             in your &quot;home&quot; court community, as well as other local
             courts.
           </p>
-          <div className="bg-green-badge  p-8">
+          <div className="bg-green-badge rounded-xl  p-8">
             <h3 className="mb-2 text-2xl font-bold ">Our Mission</h3>
             <p className="text-lg text-gray-600">
               At Court Hub, our mission is to help tennis players meet other

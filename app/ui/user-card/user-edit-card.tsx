@@ -38,7 +38,9 @@ export default function EditCard({ userCard }: { userCard: DisplayCard }) {
               {' '}
               {userCard.self_level.charAt(0).toUpperCase() +
                 userCard.self_level.slice(1)}
-              {userCard.tourn_level ? ' | ' + userCard.tourn_level : ''}
+              {userCard.tourn_level === 0.0
+                ? ' | ' + 'n/a'
+                : ' | ' + userCard.tourn_level}
             </span>
           </div>
         </div>

@@ -60,6 +60,11 @@ export default function NavLinks({
               },
             )}
           >
+            {link.name === 'Inbox' && newMessage && (
+              <span>
+                <BellAlertIcon className="h-4 w-4 animate-ping text-red-600" />
+              </span>
+            )}
             <LinkIcon
               className={clsx('mr-2 h-6 w-6', {
                 'h-5 rotate-90 transform fill-blue-600 md:fill-white':
