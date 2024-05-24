@@ -114,7 +114,7 @@ export default function EditCardForm({
           const imageElement = document.createElement('img');
           imageElement.src = newBlob.url;
           imageElement.alt = 'Avatar';
-          imageElement.className = 'rounded-full';
+          imageElement.className = 'rounded-full mt-4 h-24 w-24';
           const imageContainer = document.getElementById('avatar-container');
           const avatarDisplay = document.getElementById('avatar-display');
           if (avatarDisplay) {
