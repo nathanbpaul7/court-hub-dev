@@ -94,8 +94,8 @@ export default function Card({
             {userCard.self_level.charAt(0).toUpperCase() +
               userCard.self_level.slice(1)}
             {userCard.years_xp ? ' | ' + userCard.years_xp + 'yrs' : ''}
-            {userCard.tourn_level === 0
-              ? ' | ' + 'n/a'
+            {Number(userCard.tourn_level) === 0.0
+              ? ''
               : ' | ' + userCard.tourn_level}
           </span>
         </div>
