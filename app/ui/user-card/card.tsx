@@ -87,7 +87,13 @@ export default function Card({
         </div>
         <div className=" ml-6 mt-16 flex flex-col justify-center text-left">
           <h2 className="text-2xl font-semibold text-blue-600 antialiased">
-            {userCard.username}
+            {userCard.username
+              .split(' ')
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ')
+              .split(' ')
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ')}
           </h2>
           <span className="text-sm text-blue-600">
             {' '}
