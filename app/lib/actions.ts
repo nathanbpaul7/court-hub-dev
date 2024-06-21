@@ -24,8 +24,8 @@ const registerFormOauth = z.object({
   last: z
     .string()
     .min(1, { message: 'Please input your name.' })
-    .regex(/^[a-zA-Z]+$/, {
-      message: 'Username must only contain letters.',
+    .regex(/^[a-zA-Z-]+$/, {
+      message: 'Username must only contain letters or hyphens.',
     })
     .max(30, {
       message: 'Last name can only be 30 characters long, sorry if that sucks!',
@@ -47,7 +47,7 @@ const registerForm = z.object({
   last: z
     .string()
     .min(1, { message: 'Please input your name.' })
-    .regex(/^[a-zA-Z]+$/, {
+    .regex(/^[a-zA-Z-]+$/, {
       message: 'Username must only contain letters.',
     })
     .max(30, {

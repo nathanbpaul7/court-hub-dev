@@ -149,13 +149,15 @@ export default async function Page({
         id="conversations-desktop"
         className=" hidden w-full flex-col gap-4 overflow-y-hidden xl:flex xl:h-auto"
       >
-        <ConversationsTogetherDesktop
-          convos={searchedConvos}
-          messages={messages}
-          userData={userData}
-          otherUserCards={otherUserCards}
-          chatOpenById={display_convo_id}
-        />
+        {!searchFlagNone && (
+          <ConversationsTogetherDesktop
+            convos={searchedConvos}
+            messages={messages}
+            userData={userData}
+            otherUserCards={otherUserCards}
+            chatOpenById={display_convo_id}
+          />
+        )}
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">
             <span className="absolute top-10">No conversations found</span>
@@ -166,13 +168,15 @@ export default async function Page({
         id=" conversations-mobile"
         className="flex w-full flex-col gap-4  xl:hidden"
       >
-        <ConversationsTogetherMobile
-          convos={searchedConvos}
-          messages={messages}
-          userData={userData}
-          otherUserCards={otherUserCards}
-          modalOpenById={display_convo_id}
-        />
+        {!searchFlagNone && (
+          <ConversationsTogetherMobile
+            convos={searchedConvos}
+            messages={messages}
+            userData={userData}
+            otherUserCards={otherUserCards}
+            modalOpenById={display_convo_id}
+          />
+        )}
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">
             <span className="absolute top-10 text-blue-600">

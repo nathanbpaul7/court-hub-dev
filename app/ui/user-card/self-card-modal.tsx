@@ -41,7 +41,7 @@ export default function SelfCardModal({
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Panel className="fixed relative left-0 z-50  h-screen min-w-[363px] overflow-y-auto overflow-x-hidden bg-white  newcard:inset-x-4 newcard:top-24 newcard:h-auto newcard:w-[500px] newcard:rounded-xl sm:left-24 md:left-1/3 ">
+            <Dialog.Panel className="fixed relative left-0 z-50  h-[100vh] min-w-[363px] overflow-y-auto overflow-x-hidden bg-white  newcard:inset-x-4 newcard:top-24 newcard:h-auto newcard:w-[500px] newcard:rounded-xl sm:left-24 md:left-1/3 ">
               <XMarkIcon
                 className="absolute right-3 top-2 h-5 w-5"
                 onClick={() => {
