@@ -47,11 +47,11 @@ function MessageForm({
 
   // Function to han
   return (
-    <div className="bg-highlight-green relative  w-full">
+    <div className="bg-highlight-green relative flex w-full justify-center">
       <form
         action={dispatch}
         onSubmit={handleSubmit}
-        className="ml-4 flex items-center justify-between space-x-8"
+        className="ml-4 flex items-center justify-between space-x-2"
       >
         <input type="hidden" name="convo_id" value={convo_id} />
         <input type="hidden" name="sender_id" value={user_id} />
@@ -67,7 +67,7 @@ function MessageForm({
             setMessageText(e.target.value);
           }}
           value={messageText}
-          className=" mr-4 h-full  w-[80%] resize-none rounded-xl border-none p-2  focus:ring-white"
+          className=" mr-4 h-full  w-full resize-none rounded-xl border-none p-2  focus:ring-white"
         />
         <SubmitButton />
       </form>
