@@ -243,7 +243,7 @@ export default function MessagesDialogModal({
                     })}
                   </div>
 
-                  <div className=" bg-green-badge my-4 ">
+                  <div className=" bg-highlight-green my-4 ">
                     <MessageForm
                       convo_id={convo.id}
                       user_id={userData.id}
