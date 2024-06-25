@@ -47,11 +47,11 @@ function MessageForm({
 
   // Function to han
   return (
-    <div className="bg-highlight-green relative mt-4 w-full">
+    <div className="bg-highlight-green relative  w-full">
       <form
         action={dispatch}
         onSubmit={handleSubmit}
-        className="flex items-center justify-center"
+        className="flex items-center justify-start"
       >
         <input type="hidden" name="convo_id" value={convo_id} />
         <input type="hidden" name="sender_id" value={user_id} />
