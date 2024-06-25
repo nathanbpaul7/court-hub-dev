@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useFormState } from 'react-dom';
 import { NewMessageWithConvoId } from '@/app/lib/actions';
 
-function MessageForm({
+function MessageFormDesktop({
   convo_id,
   user_id,
   other_user_id,
@@ -47,7 +47,7 @@ function MessageForm({
 
   // Function to han
   return (
-    <div className="bg-highlight-green relative  w-full">
+    <div className="relative w-full  bg-white">
       <form
         action={dispatch}
         onSubmit={handleSubmit}
@@ -60,14 +60,14 @@ function MessageForm({
         <textarea
           ref={textAreaRef}
           placeholder=" Type a message..."
-          rows={1}
+          rows={2}
           required
           onKeyDown={handleKeyDown}
           onChange={(e) => {
             setMessageText(e.target.value);
           }}
           value={messageText}
-          className=" mr-4 h-full  w-[85%] resize-none rounded-xl border-none p-2  focus:ring-white"
+          className=" mr-4 h-full  w-[85%] resize-none  border-none p-2  focus:ring-white"
         />
         <SubmitButton />
       </form>
@@ -91,4 +91,4 @@ function SubmitButton() {
   );
 }
 
-export default MessageForm;
+export default MessageFormDesktop;

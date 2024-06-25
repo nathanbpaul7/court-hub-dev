@@ -15,6 +15,7 @@ import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import CardModalDesktop from '../user-card/card-display-message-desktop';
 import { set } from 'zod';
 import Image from 'next/image';
+import MessageFormDesktop from './message-form-desktop';
 
 export default function MessagesDisplayDesktop({
   convo,
@@ -168,7 +169,7 @@ export default function MessagesDisplayDesktop({
       </div>
 
       <div className=" mt-4 h-full w-full">
-        <MessageForm
+        <MessageFormDesktop
           convo_id={convo.id}
           user_id={userData.id}
           other_user_id={otherUserId}
