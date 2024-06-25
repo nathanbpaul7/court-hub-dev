@@ -63,7 +63,7 @@ function MessageForm({
             setMessageText(e.target.value);
           }}
           value={messageText}
-          className=" ml-4 h-full  w-[80%] resize-none border-none p-2  focus:outline-white focus:ring-white"
+          className=" ml-4 h-full  w-[80%] resize-none rounded-xl border-none p-2  focus:ring-white"
         />
         <SubmitButton />
       </form>
