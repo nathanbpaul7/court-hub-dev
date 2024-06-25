@@ -81,7 +81,7 @@ function SubmitButton() {
   return (
     <button
       type="submit"
-      className="absolute right-2 ml-2 mr-2 rounded-md py-2 text-white focus:outline-none active:outline-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
+      className="absolute right-4 ml-2 mr-2 rounded-md py-2 text-white focus:outline-none active:outline-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
       // aria-disabled={pending}
     >
       <div className="flex rounded-full bg-blue-600 p-2">
