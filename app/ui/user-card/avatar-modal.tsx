@@ -24,10 +24,9 @@ export default function AvatarModal({
         <button
           type="button"
           onClick={openModal}
-          className="bg-green-logo whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium text-white  hover:text-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className="bg-green-logo whitespace-nowrap rounded-md px-4 py-2 text-sm  font-medium text-white  hover:text-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
-          Please upload a <span className="font-bold">real</span> photograph of
-          you so other players know who you are.
+          Upload your player photo.
         </button>
       </div>
 
@@ -61,7 +60,7 @@ export default function AvatarModal({
                     as="h3"
                     className="text-lg font-medium leading-6 text-gray-900"
                   >
-                    Upload Your Avatar
+                    Upload Your Player Photo
                   </Dialog.Title>
                   <div className="mt-2">
                     <p className="text-sm text-gray-500">

@@ -150,10 +150,10 @@ export default function EditCardForm({
             <span className="bold text-blue-600">{username}</span>
           </h1>
           <p className=" mt-2 text-sm leading-6 text-gray-600">
-            This information will be displayed publicly on Court Hub so be
-            mindful of what you share.
+            Please upload a real photo of yourself for your player card. It will
+            help other players to recognize you on the courts!
           </p>
-          <div className="mt-5 grid grid-cols-1 items-center gap-x-6 gap-y-2 md:grid-cols-6">
+          <div className="mt-4 grid grid-cols-1 items-center gap-x-6 gap-y-2 md:grid-cols-6">
             <div className="justify col-span-1 flex items-start  md:col-span-5">
               <label
                 htmlFor="about_player"
@@ -167,7 +167,7 @@ export default function EditCardForm({
                 leave a note about your playing preferences.
               </p>
             </div>
-            <div className="col-span-1 grid md:col-span-3 ">
+            <div className="col-span-1 mb-1 grid md:col-span-3 ">
               <div className="">
                 <textarea
                   id="about_player"
