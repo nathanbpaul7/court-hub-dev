@@ -108,7 +108,7 @@ export default function NewMessageDialog({
               >
                 <Dialog.Panel className=" fixed h-full w-full transform rounded-2xl  bg-white text-left align-middle shadow-xl transition-all md:right-4 md:top-24 md:h-[70%] md:w-[calc(100vw-20rem)] md:max-w-[500px]  ">
                   <div className="flex h-full w-full flex-col">
-                    <div className="mt-4 flex h-[100px] flex-col  border-b-0.5 px-4">
+                    <div className="mt-4 flex h-[100px] flex-col  border-b border-gray-400 px-4">
                       <div className="flex w-full items-center justify-between">
                         <button
                           className="flex w-1/3 items-center"
@@ -140,7 +140,7 @@ export default function NewMessageDialog({
                     )}
                     {!displayNewMessageConvo && (
                       <div className="flex h-full w-full flex-col items-center justify-between py-2">
-                        <div className="flex h-full w-full flex-col items-center justify-center border-b">
+                        <div className="flex h-full w-full flex-col items-center justify-center border-b border-gray-400">
                           <span className="text-gray-500">
                             Start a new conversation
                           </span>
