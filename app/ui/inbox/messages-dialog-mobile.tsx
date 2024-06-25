@@ -167,7 +167,7 @@ export default function MessagesDialogModal({
                   <div
                     ref={messagesEndRef}
                     id="messages-display"
-                    className=" flex h-[70%] w-full flex-grow flex-col justify-items-end space-y-2 overflow-x-hidden overflow-y-scroll border-b-0.5 p-4"
+                    className=" flex h-[70%] w-full flex-grow flex-col justify-items-end space-y-2 overflow-x-hidden overflow-y-scroll border-b-0.5 px-4 pt-4"
                   >
                     {sortedMessages.length > 5 && (
                       <div
