@@ -51,7 +51,7 @@ function MessageForm({
       <form
         action={dispatch}
         onSubmit={handleSubmit}
-        className="flex items-center justify-start"
+        className="ml-16 flex items-center justify-between"
       >
         <input type="hidden" name="convo_id" value={convo_id} />
         <input type="hidden" name="sender_id" value={user_id} />
