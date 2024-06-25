@@ -47,7 +47,7 @@ function MessageForm({
 
   // Function to han
   return (
-    <div className="relative mt-4 w-full bg-white">
+    <div className="bg-highlight-green relative mt-4 w-full">
       <form action={dispatch} onSubmit={handleSubmit} className="">
         <input type="hidden" name="convo_id" value={convo_id} />
         <input type="hidden" name="sender_id" value={user_id} />
