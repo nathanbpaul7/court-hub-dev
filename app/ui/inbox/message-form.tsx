@@ -48,22 +48,26 @@ function MessageForm({
   // Function to han
   return (
     <div className="bg-highlight-green relative mt-4 w-full">
-      <form action={dispatch} onSubmit={handleSubmit} className="">
+      <form
+        action={dispatch}
+        onSubmit={handleSubmit}
+        className="flex items-center justify-center"
+      >
         <input type="hidden" name="convo_id" value={convo_id} />
         <input type="hidden" name="sender_id" value={user_id} />
         <input type="hidden" name="recipient_id" value={other_user_id} />
         <input type="hidden" name="message" value={messageText} />
         <textarea
           ref={textAreaRef}
-          placeholder="Type a message..."
-          rows={2}
+          placeholder=" Type a message..."
+          rows={1}
           required
           onKeyDown={handleKeyDown}
           onChange={(e) => {
             setMessageText(e.target.value);
           }}
           value={messageText}
-          className=" ml-4 h-full  w-[80%] resize-none rounded-xl border-none p-2  focus:ring-white"
+          className=" ml-8 h-full  w-[80%] resize-none rounded-xl border-none p-2  focus:ring-white"
         />
         <SubmitButton />
       </form>
