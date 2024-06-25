@@ -134,7 +134,7 @@ export default function MessagesDialogModal({
               >
                 <Dialog.Panel className="fixed  flex h-full w-full flex-grow transform flex-col bg-white text-left align-middle  shadow-xl transition-all  md:right-4 md:top-16 md:h-[80vh] md:w-1/2 md:rounded-lg md:border-black xl:hidden">
                   <div
-                    className="flex h-[88px] items-center border-b-0.5 bg-white px-4 py-8 md:rounded-t-lg"
+                    className="bg-highlight-green flex h-[88px] items-center border-b-0.5 px-4 py-8 md:rounded-t-lg"
                     key="test"
                   >
                     <button className="" onClick={closeModal}>
