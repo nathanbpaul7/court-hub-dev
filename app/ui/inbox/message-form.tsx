@@ -67,7 +67,7 @@ function MessageForm({
             setMessageText(e.target.value);
           }}
           value={messageText}
-          className=" mr-4 h-full  w-[85%] resize-none rounded-xl border-none p-2  focus:ring-white"
+          className=" mr-4 h-full  w-[81%] resize-none rounded-xl border-none p-2  focus:ring-white"
         />
         <SubmitButton />
       </form>
@@ -84,7 +84,7 @@ function SubmitButton() {
       className="absolute right-4 ml-2 mr-2 rounded-md py-2 text-white focus:outline-none active:outline-none aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
       // aria-disabled={pending}
     >
-      <div className="flex rounded-full bg-blue-600 p-2">
+      <div className="bg-green-logo flex rounded-full p-2">
         <Paperoutline className="h-5 w-5 -rotate-45 " />
       </div>
     </button>

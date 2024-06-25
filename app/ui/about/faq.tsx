@@ -1,6 +1,7 @@
 'use client';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
 
 export default function Faq() {
   return (
@@ -67,6 +68,22 @@ export default function Faq() {
           No, at the moment this is just a hobby project by Nathan Paul and is
           not supported by any kind of developer team. Please reach out with any
           questions.
+        </Disclosure.Panel>
+      </Disclosure>
+      <Disclosure as="div" className="mt-4 ">
+        <Disclosure.Button className="border-green-logo group flex w-full justify-between border-b py-2 text-left">
+          <span className="  font-medium text-blue-600">
+            Can I see Court Hub's README or Github?
+          </span>
+          <ChevronDownIcon className=" h-5 w-5" />
+        </Disclosure.Button>
+        <Disclosure.Panel className="mt-2  text-blue-600">
+          Of course! Court Hub is a portfolio student project for Nathan Paul, a
+          recently trained full-stack software engineer. You can visit the
+          <Link href={'https://github.com/nathanbpaul7/court-hub-dev'}>
+            GitHub repository for this project
+          </Link>{' '}
+          and view the README there.
         </Disclosure.Panel>
       </Disclosure>
     </div>

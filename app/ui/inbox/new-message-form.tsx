@@ -111,7 +111,7 @@ function SubmitButton() {
       aria-disabled={pending}
       id="submit-button"
     >
-      <div className="flex rounded-full bg-blue-600 p-2">
+      <div className="bg-green-logo flex rounded-full p-2">
         <Paperoutline className="h-5 w-5 -rotate-45 " />
       </div>
     </button>
