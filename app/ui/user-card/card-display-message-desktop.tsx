@@ -33,12 +33,12 @@ export default function CardModalDesktop({
               <Popover.Panel className="absolute z-40  mt-2 -translate-x-[230px] transform rounded-lg border border-gray-200 bg-white  shadow-lg">
                 {({ close }) => (
                   <div>
-                    {/* <XMarkIcon
-                      className="absolute right-3 top-1 h-5 w-5"
+                    <XMarkIcon
+                      className="absolute right-1 top-1 h-5 w-5"
                       onClick={() => {
                         close();
                       }} // You can implement the close functionality here
-                    /> */}
+                    />
                     <CardOpen userCard={userCard} />
                   </div>
                 )}

@@ -131,7 +131,7 @@ export default function Hamburger({
                 <NavLinks close={close} />
                 <div id="white-space" className="flex-grow" />
                 <div className="border-green-border flex flex-col border-t bg-gray-100">
-                  {/*THIS IS FOR WHEN I ADD FORGOT PASSWORD/RESET PASSWORD <div className="flex h-20 w-full items-center justify-center">
+                  <div className="flex h-20 w-full items-center justify-center">
                     <button
                       className="hover:text-green-logo flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium"
                       onClick={() => {
@@ -141,10 +141,10 @@ export default function Hamburger({
                       <Cog6ToothIcon className="mr-2 h-6 w-6 " />
                       <div>Account Settings</div>
                     </button>
-                  </div> */}
+                  </div>
                   <div className="flex h-20 w-full items-center justify-center">
                     <button
-                      className="flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-red-200 hover:text-red-500"
+                      className="flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium hover:text-red-500"
                       onClick={() => {
                         close();
                         signOut();
