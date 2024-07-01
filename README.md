@@ -1,6 +1,6 @@
 # Court Hub
 
-#### [Video Demo](https://youtu.be/L8z1IkTxs5w)
+#### [Video Demo from CS50x Final Project Submission](https://youtu.be/L8z1IkTxs5w)
 
 ## Description:
 
