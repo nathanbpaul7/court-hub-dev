@@ -36,7 +36,7 @@ Court Hub helps players browse for other individuals who share availability, pro
 
 ## Tech Stack:
 
-Court Hub is built using a range of technologies and frameworks, to which this developer is eternally grateful for the thorough documentation and learning resources! These include:
+Court Hub is built using a range of technologies and frameworks, to which this developer is eternally grateful for their thorough documentation and learning resources! These include:
 
 - **Next.js**: Leveraged for building responsive React components and providing server-side rendering capabilities, enabling a responsive and performant web application. Big shout out to the Next.js Dashboard App Tutorial, which was a huge learning resource for me as I began this project. Much of the data fetching and validation logic was based on their implementation in the tutorial.
 - **Tailwind CSS**: Used for styling components with utility classes, facilitating rapid development and customization of UI elements.
