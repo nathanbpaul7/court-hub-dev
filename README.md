@@ -8,7 +8,7 @@ Court Hub is a web app designed to foster relationships between tennis players a
 
 Currently, there are multiple web apps that purport to plug players into Philadelphia tennis communities, but these options require users to pay a monthly fee to access their network. Additionally, these apps tend to create competitive atmospheres centered around tournament and league play, rather than more casual, social tennis activity. 
 
-Court Hub helps players browse for other individuals who share availability, proximity to a given court, or level / preferred style of play. The app addresses the challenge many tennis enthusiasts face in finding compatible hitting partners whose schedules match their own by making it easy to specify user preferences, and then search or filter by them. Court Hub essentially provides a locally cached social network or directory for each court location, and simplifies the process of discovering and connecting with other players.
+Court Hub helps players browse for other individuals who share availability, proximity to a given court, or level / preferred style of play. The app addresses the challenge many tennis enthusiasts face finding compatible hitting partners whose schedules match their own.  Court Hub makes it easy to specify the level or type of play you're looking for, and also which court you want to play at and when!  You can browse, search, and filter our directory. Court Hub essentially provides a locally cached social network or directory for each public court location in Philadelphia, and simplifies the process of discovering and connecting with other players at those courts.
 
 ## Features:
 
@@ -52,8 +52,8 @@ To explore Court Hub and start connecting with fellow tennis enthusiasts, follow
 
 1. Visit the Court Hub website and register for an account using either email and password credentials or Google OAuth authentication.
 2. Upon registration, complete your player card by providing information about your tennis experience, preferences, and availability.
-3. Browse the Player Directory to discover potential playing partners based on your criteria. Utilize the search and filtering options to narrow down your choices effectively.
-4. Initiate conversations with other users via the messaging feature to coordinate matches and schedule playing sessions.
+3. Browse the Player Directory to discover potential playing partners based on your criteria. Utilize the search and filtering options to narrow down your choices.
+4. Initiate conversations with other users via the messaging feature to coordinate matches and schedule playing sessions. (soon we hope to have an invite to play feature with scheduling--see below!)
 5. Stay updated on local court information and availability to plan your matches efficiently and make the most of your court time.
 
 ## Future Implementations:
@@ -62,7 +62,7 @@ In future versions of Court Hub, the following features are under consideration 
 
 - **Group Chat Functionality**: Introduce group chat capabilities to facilitate broader discussions and coordination among multiple users, enhancing community engagement and interaction.
 - **User Feedback**: Incorporate more user feedback in which courts are included in the app, what info is shared about each court, updates to that info, and perhaps more info about activity at court locations between Court Hub members.
-- **Nudge/Poke Feature**: Implement a feature for users to send friendly nudges or pokes to potential playing partners, signaling interest in connecting or playing together. This feature aims to streamline communication and encourage spontaneous match arrangements.
+- **Invite to Play Feature**: Users will be able to click on player cards to schedule a session together, communicating which court to play at and when, as well as which type of play, and who else is invited (if doubles or 3+ players).
 - **Suggested Action Features**: Provide suggested action prompts within the Player Directory, such as "Play Singles Tonight" or "Play Doubles on Weekend Morning," to guide users towards relevant match opportunities based on their preferences and availability.
 - **AI Integration**: Explore integrating AI capabilities into Court Hub to enhance user experience and streamline feature navigation. AI-powered assistance could include natural language processing for voice commands and personalized match recommendations based on user preferences.
 - **Enhanced API integration**: If there is a way to create some way to create financial viability, it would be awesome to bring in some weather API’s to share current court conditions.
