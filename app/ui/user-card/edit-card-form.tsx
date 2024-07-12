@@ -150,8 +150,7 @@ export default function EditCardForm({
             <span className="bold text-blue-600">{username}</span>
           </h1>
           <p className=" mt-2 text-sm leading-6 text-gray-600">
-            Please upload a real photo of yourself for your player card. It will
-            help other players to recognize you on the courts!
+            Please upload a real and up to date photo of yourself for your player card so other players can recognize you on the courts.
           </p>
           <div className="mt-4 grid grid-cols-1 items-center gap-x-6 gap-y-2 md:grid-cols-6">
             <div className="justify col-span-1 flex items-start  md:col-span-5">
