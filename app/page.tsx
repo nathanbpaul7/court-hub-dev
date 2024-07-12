@@ -15,12 +15,11 @@ export default function Page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <p className={` text-xl text-gray-800 md:text-xl md:leading-normal`}>
-            <strong>Welcome to Court Hub.</strong> This is a web app developed
-            by Nathan Paul for the Harvard/edX 2024 CS50 Final Project.
+            <strong>Welcome to Court Hub.</strong> This is a web app initially designed and developed
+            by Nathan Paul for his 2024 Harvard/edX CS50x final project, and now deployed in the real world!
             <br /> <br />
             Court Hub is a platform that allows users to connect with tennis
-            players in their local court community. Currently this project is in
-            development and is not yet available for public use. Please check
+            players in their local court community. This is an ongoing project by Nathan Paul. Please check
             back in weeks to come for new feature roll-outs!
           </p>
           <Link
