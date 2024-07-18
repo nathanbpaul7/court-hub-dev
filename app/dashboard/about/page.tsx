@@ -37,7 +37,7 @@ export default function Page() {
             </span>
             <p className="max-w-md text-gray-700">
               Register and create your account. Fill out your player card with
-              your skill level, availability, and "home court" location to gain
+              your skill level, availability, and home court location to gain
               access to the Court Hub player directory.
             </p>
           </div>
