@@ -81,7 +81,7 @@ export default async function Page({
           <ConvoSkeleton />
         </div>
         <div className="relative mt-4 flex justify-center">
-          <span className="bg-green-logo hover:text-highlight-green mb-4 whitespace-nowrap rounded-lg px-16 py-2 text-sm font-medium  text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <span className="mb-4 whitespace-nowrap rounded-lg bg-green-logo px-16 py-2 text-sm font-medium text-white  hover:text-highlight-green focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             Draft new message
             <NewMessageDialog
               userData={userData}
@@ -152,7 +152,7 @@ export default async function Page({
       >
         {!searchFlagNone && (
           <>
-            <Suspense fallback={<TennisSkeleton />}>
+            <Suspense fallback={<ConvoSkeleton />}>
               <ConversationsTogetherDesktop
                 convos={searchedConvos}
                 messages={messages}
@@ -175,7 +175,7 @@ export default async function Page({
       >
         {!searchFlagNone && (
           <>
-            <Suspense fallback={<TennisSkeleton />}>
+            <Suspense fallback={<ConvoSkeleton />}>
               <ConversationsTogetherMobile
                 convos={searchedConvos}
                 messages={messages}

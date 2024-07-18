@@ -9,6 +9,7 @@ import {
   MessageData,
   UserIdGrab,
   AllUsersWithId,
+  NotificationSettings,
 } from './definitions';
 import { unstable_noStore as noStore, unstable_cache } from 'next/cache';
 import { auth } from '@/auth';
@@ -379,5 +380,23 @@ export async function getUser(email: string) {
   } catch (error) {
     console.error('Failed to fetch user:', error);
     throw new Error('Failed to fetch user.');
+  }
+}
+
+export async function fetchUserNotificationSettings(email: string) {
+  try {
+    const settings = await sql<NotificationSettings>`
+      SELECT
+        marketing,
+        inbox,
+        court_updates
+      FROM
+        notifications
+      WHERE
+        email=${email}`;
+    return settings.rows[0];
+  } catch (error) {
+    console.error('Failed to fetch user notification settings:', error);
+    throw new Error('Failed to fetch user notification settings.');
   }
 }

@@ -28,7 +28,7 @@ export default async function Layout({
       >
         {children}
       </div>
-      <div className="bg-green-logo flex h-40 w-full justify-center p-4 text-white ">
+      <div className="flex h-40 w-full justify-center bg-green-logo p-4 text-white ">
         <div className=" grid w-full grid-cols-2 items-center space-y-4 text-center">
           <div className="flex h-full w-full items-center justify-center">
             <span>

@@ -4,27 +4,24 @@ import Image from 'next/image';
 
 export default function Page() {
   return (
-    <div className="relative flex max-h-[90vh] max-w-[1100px] flex-col overflow-scroll px-8 py-8 text-blue-600">
+    <div className="relative flex max-h-[90vh] max-w-[1100px] flex-col overflow-scroll p-4 text-blue-600 sm:p-8">
       <div className="z-10 flex space-x-8 ">
-        <div className="bg-highlight-green mb-8 rounded-xl p-8">
-          <h2 className="mb-4 text-3xl font-bold">About</h2>
+        <div className="mb-8 rounded-xl bg-highlight-green p-8">
           <p className=" mb-8 text-lg text-gray-700">
             Welcome to Court Hub, on online platform for connecting with other
             tennis players at public courts across Philadelphia. Whether
             you&apos;re a seasoned player, burgeoning addict, or just starting
             out, Court Hub makes it easy to find and connect with other players
-            in your &quot;home&quot; court community, as well as other local
-            courts.
+            near you.
           </p>
-          <div className="bg-green-badge rounded-xl  p-8">
+          <div className="rounded-xl bg-green-badge  p-8">
             <h3 className="mb-2 text-2xl font-bold ">Our Mission</h3>
             <p className="text-lg text-gray-600">
-              At Court Hub, our mission is to help tennis players meet other
-              tennis players. It is a tool at the service of Philly&apos;s
-              growing tennis community. We believe that tennis should be a
-              social and enjoyable experience for everyone. Our platform is
-              designed to help players of all levels and experience meet other
-              players who share çpreferences and availability.
+              Court Hub is a tool at the service of Philly&apos;s growing tennis
+              community. We believe that tennis should be a social and enjoyable
+              experience for everyone. Our platform is designed to help players
+              of all levels and experience meet new partners with similar play
+              preferences and availability.
             </p>
           </div>
         </div>
@@ -40,8 +37,8 @@ export default function Page() {
             </span>
             <p className="max-w-md text-gray-700">
               Register and create your account. Fill out your player card with
-              your skill level, availability, and preferred court locations to
-              gain access to the Court Hub player directory.
+              your skill level, availability, and "home court" location to gain
+              access to the Court Hub player directory.
             </p>
           </div>
           <div className="z-2 flex  flex-col rounded-2xl border border-gray-400 p-4">

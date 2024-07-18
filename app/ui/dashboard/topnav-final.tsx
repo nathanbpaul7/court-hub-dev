@@ -41,7 +41,7 @@ export default function SideNav({
   }, [modalOpen, cardIsOpen]);
 
   useEffect(() => {
-    console.log(pathname);
+    // console.log(pathname);
     pusherClient.subscribe(userData.id);
     pusherClient.bind('new-message', function (data: any) {
       setNewMessage(true);
@@ -57,7 +57,7 @@ export default function SideNav({
   });
 
   return (
-    <div className="bg-green-logo fixed absolute relative  top-0  flex h-20 w-full items-center justify-center ">
+    <div className="fixed absolute relative top-0  flex  h-20 w-full items-center justify-center bg-green-logo ">
       <div
         id="navbar-content"
         className="md:justify-between-none flex h-full  w-full max-w-[1150px] items-center justify-between"

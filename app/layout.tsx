@@ -9,8 +9,8 @@ export const metadata: Metadata = {
   },
 
   description:
-    'The official Court Hub dashboard built with Next.js App Router.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+    'The official Court Hub web app developed by Nathan Paul, a way for tennis communities to thrive',
+  metadataBase: new URL('https://court-hub-demo.vercel.app/'),
 };
 export default function RootLayout({
   children,
