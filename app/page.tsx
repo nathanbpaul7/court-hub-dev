@@ -15,7 +15,7 @@ export default function Page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <p className={` text-xl text-gray-800 md:text-xl md:leading-normal`}>
-            <strong>Welcome to Court Hub</strong> Philadelphia's free,
+            <strong>Welcome to Court Hub</strong> Philadelphia&apos;s free,
             open-source, tennis player directory
             <br /> <br />
             Court Hub is a platform for tennis players to find new hitting
