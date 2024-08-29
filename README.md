@@ -8,7 +8,7 @@ Court Hub is a web app designed to help tennis players connect with each other a
 
 Currently, there are multiple web apps that purport to plug players into the Philadelphia tennis community, but they all require users to pay a monthly fee to access their network. They also tend to create competitive atmospheres centered around tournament and league play without leaving space for more casual, social connections.
 
-Court Hub allows players browse for other individuals who share availability, proximity to a given court, or level / preferred style of play.  Our filterable, searchable directory makes it easy to find players whose availability and play preferences match your own, whether you're looking for early morning doubles or mid-day training sessions. Court Hub provides a local directory for each court location, and simplifies the process of discovering and connecting with other players.
+Court Hub's filterable, searchable directory makes it easy to find players at your local court whose availability, experience level, and play preferences match your own, whether you're looking for early morning doubles or mid-day training sessions. Court Hub provides a local directory for each court location, and simplifies the process of discovering and connecting with other players.
 
 ## Features:
 
