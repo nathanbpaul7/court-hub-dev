@@ -1,0 +1,77 @@
+'use client';
+import { useState, Fragment, useEffect } from 'react';
+import { Dialog, Transition } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/outline';
+import { SafeUser } from '@/app/lib/definitions';
+
+export default function DeleteAccountDialog({
+  userData,
+}: {
+  userData: SafeUser;
+}) {
+  let [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  return (
+    <>
+      <div className=" flex">
+        <button
+          type="button"
+          onClick={openModal}
+          className=" inline whitespace-nowrap text-xs text-blue-600 underline  hover:text-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+        >
+          Delete my account
+        </button>
+      </div>
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+          <Transition.Child
+            as={Fragment}
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 sm:bg-black/25" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex h-full w-full items-center justify-center p-3 text-center">
+              <Transition.Child
+                as={Fragment}
+                enter="ease-out duration-500"
+                enterFrom="translate-x-full"
+                enterTo="translate-x-0"
+                leave="ease-in duration-300"
+                leaveFrom="translate-x-0"
+                leaveTo="translate-x-full"
+              >
+                <Dialog.Panel className="fixed flex h-full w-full flex-col bg-white px-4 py-1 text-left  align-middle sm:h-auto sm:max-w-xl sm:rounded-xl  ">
+                  <div className="mb-2 mt-4 flex items-center ">
+                    <h1 className="text-lg font-bold  text-gray-900">
+                      Delete My Account
+                    </h1>
+                    <XMarkIcon
+                      className="ml-auto  h-5 w-5"
+                      onClick={closeModal}
+                    />
+                  </div>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
+    </>
+  );
+}

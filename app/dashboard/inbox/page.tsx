@@ -11,10 +11,11 @@ import ConversationsTogetherDesktop from '@/app/ui/inbox/conversation-together-d
 import ConversationsTogetherMobile from '@/app/ui/inbox/conversation-together-mobile';
 
 import NewMessageDialog from '@/app/ui/inbox/new-message-dialog-mobile';
-import { ConvoSkeleton } from '@/app/ui/new-skeletons';
+import { ConvoSkeleton, TennisSkeleton } from '@/app/ui/new-skeletons';
 import Search from '@/app/ui/search';
 import { PencilSquareIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { Suspense } from 'react';
 
 export default async function Page({
   searchParams,
@@ -80,7 +81,7 @@ export default async function Page({
           <ConvoSkeleton />
         </div>
         <div className="relative mt-4 flex justify-center">
-          <span className="bg-green-logo hover:text-highlight-green mb-4 whitespace-nowrap rounded-lg px-16 py-2 text-sm font-medium  text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+          <span className="mb-4 whitespace-nowrap rounded-lg bg-green-logo px-16 py-2 text-sm font-medium text-white  hover:text-highlight-green focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
             Draft new message
             <NewMessageDialog
               userData={userData}
@@ -150,13 +151,17 @@ export default async function Page({
         className=" hidden w-full flex-col gap-4 overflow-y-hidden xl:flex xl:h-auto"
       >
         {!searchFlagNone && (
-          <ConversationsTogetherDesktop
-            convos={searchedConvos}
-            messages={messages}
-            userData={userData}
-            otherUserCards={otherUserCards}
-            chatOpenById={display_convo_id}
-          />
+          <>
+            <Suspense fallback={<ConvoSkeleton />}>
+              <ConversationsTogetherDesktop
+                convos={searchedConvos}
+                messages={messages}
+                userData={userData}
+                otherUserCards={otherUserCards}
+                chatOpenById={display_convo_id}
+              />
+            </Suspense>
+          </>
         )}
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">
@@ -169,13 +174,17 @@ export default async function Page({
         className="flex w-full flex-col gap-4  xl:hidden"
       >
         {!searchFlagNone && (
-          <ConversationsTogetherMobile
-            convos={searchedConvos}
-            messages={messages}
-            userData={userData}
-            otherUserCards={otherUserCards}
-            modalOpenById={display_convo_id}
-          />
+          <>
+            <Suspense fallback={<ConvoSkeleton />}>
+              <ConversationsTogetherMobile
+                convos={searchedConvos}
+                messages={messages}
+                userData={userData}
+                otherUserCards={otherUserCards}
+                modalOpenById={display_convo_id}
+              />
+            </Suspense>
+          </>
         )}
         {searchFlagNone && (
           <div className="relative flex flex-col items-center rounded-md p-4">

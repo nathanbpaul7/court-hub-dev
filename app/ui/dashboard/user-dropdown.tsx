@@ -6,12 +6,14 @@ import { DisplayCard } from '@/app/lib/definitions';
 
 import {
   ArrowRightOnRectangleIcon,
+  Cog6ToothIcon,
   IdentificationIcon,
   PencilIcon,
   PencilSquareIcon,
   PowerIcon,
 } from '@heroicons/react/24/outline';
 import { signOut } from 'next-auth/react';
+import Link from 'next/link';
 
 export default function UserDropdown({
   card,
@@ -97,7 +99,35 @@ export default function UserDropdown({
                 </div>
               )}
             </Menu.Item>
-
+            <Menu.Item>
+              {({ active, close }) => (
+                <div>
+                  <Link
+                    href="/dashboard/settings"
+                    onClick={(e) => {
+                      close();
+                      setIsOpen(!isOpen);
+                    }}
+                    className={`${
+                      active ? 'bg-green-logo text-white' : 'text-blue-600'
+                    } group flex w-full items-center rounded-md px-2 py-4 text-sm`}
+                  >
+                    {active ? (
+                      <Cog6ToothIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <Cog6ToothIcon
+                        className="mr-2 h-5 w-5"
+                        aria-hidden="true"
+                      />
+                    )}
+                    Account Settings
+                  </Link>
+                </div>
+              )}
+            </Menu.Item>
             <Menu.Item>
               {({ active }) => (
                 <button
@@ -115,7 +145,7 @@ export default function UserDropdown({
                     />
                   ) : (
                     <ArrowRightOnRectangleIcon
-                      className="text-green-logo mr-2 h-5 w-5"
+                      className="mr-2 h-5 w-5 text-green-logo"
                       aria-hidden="true"
                     />
                   )}

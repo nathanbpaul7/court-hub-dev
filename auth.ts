@@ -106,5 +106,15 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       // For non-OAuth sign-ins, do nothing special
       return true; // Continue the sign-in process
     },
+    async jwt({ token, account }) {
+      if (account) {
+        token.provider = account.provider;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      session.user.provider = token.provider;
+      return session;
+    },
   },
 });

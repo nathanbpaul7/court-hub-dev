@@ -4,11 +4,13 @@ import { string, z } from 'zod';
 import { sql } from '@vercel/postgres';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
-import { signIn, signOut } from '@/auth';
+import { signIn, auth } from '@/auth';
 import { AuthError } from 'next-auth';
 import bcrypt from 'bcrypt';
 import { cookies } from 'next/headers';
 import { pusher } from './pusher-server';
+import { unstable_noStore as noStore, unstable_cache } from 'next/cache';
+
 const registerFormOauth = z.object({
   first: z
     .string()
@@ -351,6 +353,59 @@ export async function updateCard(prevState: State, formData: FormData) {
   redirect('/dashboard');
 }
 
+export async function resetPassword(prevState: any, formData: FormData) {
+  const validatedFields = z
+    .object({
+      password: z
+        .string()
+        .min(8, {
+          message:
+            'Password must be at least 8 characters long. Please try again.',
+        })
+        .nullable(),
+    })
+    .safeParse({
+      password: formData.get('password'),
+    });
+  if (!validatedFields.success) {
+    console.log(validatedFields.error);
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message:
+        'Error resetting your password invalid password input, try again please.',
+    };
+  }
+  const { password } = validatedFields.data;
+  try {
+    const session = await auth();
+    if (!session?.user)
+      throw new Error(
+        'unable to access user session data to update password, you are not logged in',
+      );
+    const hashedPassword = await bcrypt.hash(password!, 10);
+    await sql`
+    UPDATE users
+    SET password = ${hashedPassword}
+    WHERE email = ${session.user.email};
+  `;
+    cookies().set('reset', 'true', {
+      expires: new Date(Date.now() + 10000),
+      path: '/',
+    });
+  } catch (error) {
+    cookies().set('reset_failed', 'true', {
+      expires: new Date(Date.now() + 10000),
+      path: '/',
+    });
+    return {
+      message:
+        'Database Error: Failed to update password due to issue accessing the database, email admin.',
+    };
+  }
+  revalidatePath('/dashboard/settings');
+  redirect('/dashboard/settings');
+}
+
 export async function register(prevState: any, formData: FormData) {
   const validatedFields = registerForm.safeParse({
     first: formData.get('first-name'),
@@ -366,7 +421,13 @@ export async function register(prevState: any, formData: FormData) {
     };
   }
   const { first, last, email, password } = validatedFields.data;
-  const name = `${first} ${last}`;
+  const capitalize = (s: string) =>
+    s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+
+  const capitalizeHyphenated = (s: string) =>
+    s.split('-').map(capitalize).join('-');
+
+  const name = `${capitalize(first)} ${capitalizeHyphenated(last)}`;
   const hashedPassword = await bcrypt.hash(password!, 10);
   try {
     await sql`
@@ -375,6 +436,12 @@ export async function register(prevState: any, formData: FormData) {
       ON CONFLICT (id) DO NOTHING;`;
 
     console.log(`Seeded new user: ${name}`);
+    await sql`
+    INSERT INTO notifications (email)
+    VALUES (${email})
+    ON CONFLICT (id) DO NOTHING;`;
+
+    console.log(`Seeded new row in notification pref table for: ${email}`);
 
     cookies().set('registered', 'true', {
       expires: new Date(Date.now() + 10000),
@@ -416,6 +483,13 @@ export async function registerOauth(prevState: any, formData: FormData) {
       ON CONFLICT (id) DO NOTHING;`;
 
     console.log(`Seeded new user: ${name}`);
+
+    await sql`
+    INSERT INTO notifications (email)
+    VALUES (${email})
+    ON CONFLICT (id) DO NOTHING;`;
+
+    console.log(`Seeded new row in notification pref table for: ${email}`);
   } catch (error) {
     cookies().set('register_failed', 'true', {
       expires: new Date(Date.now() + 10000),
@@ -675,4 +749,51 @@ export async function DashboardNewMessageWithConvoId(
     redirect(`/dashboard/inbox?${searchParams.toString()}`);
     // redirect(`/dashboard/inbox?${searchParams.toString()}`);
   }
+}
+
+export async function updateEmailPrefs(prevState: any, formData: FormData) {
+  noStore();
+  const validatedFields = z
+    .object({
+      email: z.string().email(),
+      marketing_enabled: z.enum(['true', 'false']),
+      inbox_enabled: z.enum(['true', 'false']),
+      courtupdates_enabled: z.enum(['true', 'false']),
+    })
+    .safeParse({
+      email: formData.get('email'),
+      marketing_enabled: formData.get('marketing_enabled'),
+      inbox_enabled: formData.get('inbox_enabled'),
+      courtupdates_enabled: formData.get('courtupdates_enabled'),
+    });
+  if (!validatedFields.success) {
+    console.log(validatedFields.error.flatten().fieldErrors);
+    return {
+      errors: validatedFields.error.flatten().fieldErrors,
+      message:
+        'Error submiting form due to invalid input type. Failed to Update Email Prefs.',
+    };
+  }
+  const { email, marketing_enabled, inbox_enabled, courtupdates_enabled } =
+    validatedFields.data;
+
+  try {
+    const session = await auth();
+    if (!session?.user || session.user.email !== email)
+      throw new Error(
+        'unable to access user session data to update email prefs, you are not logged in',
+      );
+    await sql`
+    UPDATE notifications
+    SET marketing = ${marketing_enabled}, inbox = ${inbox_enabled}, court_updates = ${courtupdates_enabled}
+    WHERE email = ${session.user.email};
+  `;
+  } catch (error) {
+    return {
+      message:
+        'Database Error: Failed to update user email notification settings due to database error.',
+    };
+  }
+  revalidatePath('/dashboard/settings');
+  redirect('/dashboard/settings');
 }

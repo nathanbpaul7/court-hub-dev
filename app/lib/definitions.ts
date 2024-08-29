@@ -80,3 +80,10 @@ export type DisplayCard = {
   weekend_late_pm: boolean;
   weekend_evening: boolean;
 };
+
+export type NotificationSettings = {
+  [key: string]: boolean;
+  inbox: boolean;
+  marketing: boolean;
+  court_updates: boolean;
+};

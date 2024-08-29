@@ -4,11 +4,12 @@
 
 ## Description:
 
-Court Hub is a web app designed to foster relationships between tennis players at public tennis courts across Philadelphia.
+Court Hub is a web app designed to help tennis players connect with each other at public tennis courts across Philadelphia. It addresses a challenge facing many tennis enthusiasts--finding people at your level who can play at the same time and place as you!
 
-Currently, there are multiple web apps that purport to plug players into Philadelphia tennis communities, but these options require users to pay a monthly fee to access their network. Additionally, these apps tend to create competitive atmospheres centered around tournament and league play, rather than more casual, social tennis activity. 
+Currently, there are multiple web apps that purport to plug players into the Philadelphia tennis community, but they all require users to pay a monthly fee to access their network. They also tend to create competitive atmospheres centered around tournament and league play without leaving space for more casual, social connections.
 
-Court Hub helps players browse for other individuals who share availability, proximity to a given court, or level / preferred style of play. The app addresses the challenge many tennis enthusiasts face finding compatible hitting partners whose schedules match their own.  Court Hub makes it easy to specify the level or type of play you're looking for, and also which court you want to play at and when!  You can browse, search, and filter our directory. Court Hub essentially provides a locally cached social network or directory for each public court location in Philadelphia, and simplifies the process of discovering and connecting with other players at those courts.
+Court Hub's filterable, searchable directory makes it easy to find players at your local court whose availability, experience level, and play preferences match your own, whether you're looking for early morning doubles or mid-day training sessions. Court Hub provides a local directory for each court location, and simplifies the process of discovering and connecting with other players.
+
 
 ## Features:
 
