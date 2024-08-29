@@ -83,7 +83,7 @@ export default function MessagesDisplayDesktop({
   return (
     <div className="relative ml-4 flex h-full w-full flex-col bg-white">
       <div
-        className=" mb-2 flex h-[88px] items-center border-b-2 border-gray-300  px-4 py-8"
+        className="  flex h-[88px] items-center border-b-2 border-gray-300  px-4 py-8"
         key="header"
       >
         <Image
