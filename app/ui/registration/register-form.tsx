@@ -4,12 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { useFormState, useFormStatus } from 'react-dom';
 import { register } from '@/app/lib/actions';
-import {
-  CheckCircleIcon,
-  FaceFrownIcon,
-  FaceSmileIcon,
-  XCircleIcon,
-} from '@heroicons/react/24/outline';
+import { FaceFrownIcon } from '@heroicons/react/24/outline';
 import Terms from './terms';
 
 export function SubmitButton() {
@@ -17,7 +12,7 @@ export function SubmitButton() {
 
   return (
     <button
-      className="bg-green-logo flex h-10 items-center rounded-lg px-4 text-sm font-medium text-white shadow-md transition-colors hover:bg-green-600"
+      className="flex h-10 items-center rounded-lg bg-green-logo px-4 text-sm font-medium text-white shadow-md transition-colors hover:bg-green-600"
       type="submit"
       aria-disabled={pending}
     >

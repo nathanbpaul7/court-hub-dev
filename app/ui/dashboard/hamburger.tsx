@@ -1,6 +1,7 @@
 'use client';
 import { Menu, Transition } from '@headlessui/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
+import Link from 'next/link';
 
 import { signOut } from 'next-auth/react';
 
@@ -21,6 +22,7 @@ import { CourtIcon } from '../components';
 import NavLinks from './nav-links';
 
 import Image from 'next/image';
+import { link } from 'fs';
 
 export default function Hamburger({
   setModalOpen,
@@ -42,7 +44,7 @@ export default function Hamburger({
           <div className="relative mr-2 inline-block overflow-hidden text-left md:hidden">
             <Menu.Button
               className="
-            bg-green-logo inline-flex items-center rounded-md p-2 focus:outline-none focus-visible:ring-white"
+            inline-flex items-center rounded-md bg-green-logo p-2 focus:outline-none focus-visible:ring-white"
             >
               {!open && (
                 <Bars3Icon
@@ -86,11 +88,11 @@ export default function Hamburger({
                       close();
                     }}
                   >
-                    <XMarkIcon className="text-green-logo  h-6 w-6" />
+                    <XMarkIcon className="h-6  w-6 text-green-logo" />
                   </button>
                 </div>
 
-                <div className="border-green-border flex h-[120px] w-full items-center border-b">
+                <div className="flex h-[120px] w-full items-center border-b border-green-border">
                   <div className="ml-6">
                     <Image
                       height={72}
@@ -130,21 +132,20 @@ export default function Hamburger({
 
                 <NavLinks close={close} />
                 <div id="white-space" className="flex-grow" />
-                <div className="border-green-border flex flex-col border-t bg-gray-100">
-                  {/*THIS IS FOR WHEN I ADD FORGOT PASSWORD/RESET PASSWORD <div className="flex h-20 w-full items-center justify-center">
-                    <button
-                      className="hover:text-green-logo flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium"
-                      onClick={() => {
-                        close();
-                      }}
+                <div className="flex flex-col border-t border-green-border bg-gray-100">
+                  <div className="flex h-20 w-full items-center justify-center">
+                    <Link
+                      href="/dashboard/settings"
+                      className="flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium hover:text-green-logo"
+                      onClick={close}
                     >
                       <Cog6ToothIcon className="mr-2 h-6 w-6 " />
                       <div>Account Settings</div>
-                    </button>
-                  </div> */}
+                    </Link>
+                  </div>
                   <div className="flex h-20 w-full items-center justify-center">
                     <button
-                      className="flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-red-200 hover:text-red-500"
+                      className="flex h-full w-full items-center rounded-md rounded-md bg-gray-50 p-3 text-sm font-medium hover:text-red-500"
                       onClick={() => {
                         close();
                         signOut();
@@ -163,23 +164,6 @@ export default function Hamburger({
     </Menu>
   );
 }
-
-const links = [
-  { name: 'Player Directory', href: '/dashboard', icon: UserGroupIcon },
-  {
-    name: 'Edit Player Card',
-    href: '/dashboard/player-card',
-    icon: PencilSquareIcon,
-  },
-  { name: 'Inbox', href: '/dashboard/inbox', icon: EnvelopeOpenIcon },
-
-  { name: 'Court Info', href: '/dashboard/court', icon: CourtIcon },
-  {
-    name: 'About CourtHUB',
-    href: '/dashboard/about',
-    icon: QuestionMarkCircleIcon,
-  },
-];
 
 {
   /* <form action={trigSignOut} className="col-span-1  grid">

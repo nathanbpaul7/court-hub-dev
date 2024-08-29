@@ -1,8 +1,5 @@
-import { TennisTravel } from '@/app/ui/components';
 import CourtInfoTotal from '@/app/ui/courts/court-map-info-display';
-import MapComponent from '@/app/ui/courts/court-tab-display';
 import { fetchAllCards, fetchUserCardData } from '@/app/lib/data';
-import Link from 'next/link';
 
 export default async function Page() {
   const userCard = await fetchUserCardData();
