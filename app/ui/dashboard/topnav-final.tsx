@@ -44,7 +44,7 @@ export default function SideNav({
     // console.log(pathname);
     pusherClient.subscribe(userData.id);
     pusherClient.bind('new-message', function (data: any) {
-      setNewMessage(true);
+      // setNewMessage(true);
       const params = new URLSearchParams(searchParams);
       params.set('new_message', JSON.stringify(data.message));
       refresh();
