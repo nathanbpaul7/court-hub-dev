@@ -4,8 +4,8 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Court Hub DEMO',
-    default: 'Court Hub DEMO',
+    template: '%s | Court Hub',
+    default: 'Court Hub',
   },
 
   description:
