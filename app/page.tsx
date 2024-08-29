@@ -19,10 +19,10 @@ export default function Page() {
             open-source, tennis player directory
             <br /> <br />
             Court Hub is a platform for tennis players to find new hitting
-            partners in their local court community. Whether you're a seasoned
-            player, a burgeoning addict, or just starting out, Court Hub makes
-            it easy to find and connect with other players near you. Click below
-            to register and start finding new partners today.
+            partners in their local court community. Whether you&apos;re a
+            seasoned player, a burgeoning addict, or just starting out, Court
+            Hub makes it easy to find and connect with other players near you.
+            Click below to register and start finding new partners today.
           </p>
           <Link
             href="/login"
