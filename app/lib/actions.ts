@@ -421,7 +421,13 @@ export async function register(prevState: any, formData: FormData) {
     };
   }
   const { first, last, email, password } = validatedFields.data;
-  const name = `${first} ${last}`;
+  const capitalize = (s: string) =>
+    s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+
+  const capitalizeHyphenated = (s: string) =>
+    s.split('-').map(capitalize).join('-');
+
+  const name = `${capitalize(first)} ${capitalizeHyphenated(last)}`;
   const hashedPassword = await bcrypt.hash(password!, 10);
   try {
     await sql`
@@ -430,6 +436,12 @@ export async function register(prevState: any, formData: FormData) {
       ON CONFLICT (id) DO NOTHING;`;
 
     console.log(`Seeded new user: ${name}`);
+    await sql`
+    INSERT INTO notifications (email)
+    VALUES (${email})
+    ON CONFLICT (id) DO NOTHING;`;
+
+    console.log(`Seeded new row in notification pref table for: ${email}`);
 
     cookies().set('registered', 'true', {
       expires: new Date(Date.now() + 10000),
@@ -471,6 +483,13 @@ export async function registerOauth(prevState: any, formData: FormData) {
       ON CONFLICT (id) DO NOTHING;`;
 
     console.log(`Seeded new user: ${name}`);
+
+    await sql`
+    INSERT INTO notifications (email)
+    VALUES (${email})
+    ON CONFLICT (id) DO NOTHING;`;
+
+    console.log(`Seeded new row in notification pref table for: ${email}`);
   } catch (error) {
     cookies().set('register_failed', 'true', {
       expires: new Date(Date.now() + 10000),

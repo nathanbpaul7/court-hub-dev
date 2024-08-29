@@ -70,8 +70,8 @@ export default function ResetPasswordForm({
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 md:grid md:grid-cols-6">
-          <div className="md:col-span-3">
+        <div className="6 mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+          <div className="">
             <label
               htmlFor="password"
               className="block text-sm font-medium leading-6 text-gray-900"
@@ -130,7 +130,7 @@ export default function ResetPasswordForm({
           </div>
         </div>
       </div>
-      <div className="mt-4 flex items-center justify-center gap-x-6">
+      <div className="my-4 flex items-center justify-center gap-x-6">
         <button
           onClick={closeModal}
           className="flex h-10 items-center rounded-lg bg-gray-100 px-4 text-sm font-medium text-gray-600 shadow-md transition-colors hover:bg-gray-200"

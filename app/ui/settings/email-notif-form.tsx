@@ -67,7 +67,7 @@ export default function EmailNotifForm({
           value={courtUpdateEnabled ? 'true' : 'false'}
         />
         <div className="my-2 flex flex-col">
-          <h1 className="mt-4 text-lg font-bold">Email Notifications</h1>
+          <h1 className="mt-4 text-lg font-bold">Notifications</h1>
         </div>
         <div className="mb-2 mt-4 flex  items-center gap-2">
           <ChatBubbleLeftRightIcon className=" mr-2 inline h-8 w-8 flex-shrink-0 text-green-logo" />
@@ -77,8 +77,8 @@ export default function EmailNotifForm({
               Player Interactions
             </h1>
             <span className="text-sm text-blue-600 ">
-              Receive emails when players message you or you have invitations to
-              play.
+              Receive emails when you get a message or invite from another
+              player.
             </span>
           </div>
           <div className="sm:mt-4">
@@ -243,7 +243,7 @@ export function SubmitButton({
   return (
     <button
       className={clsx(
-        'mt-2 flex h-10 w-full items-center justify-center rounded-lg  px-4 text-sm font-medium text-white shadow-md',
+        'mt-4 flex h-10 w-full items-center justify-center rounded-lg  px-4 text-sm font-medium text-white shadow-md',
         {
           'bg-green-logo': settingsChangeFlag,
           'bg-gray-300': !settingsChangeFlag,
@@ -253,7 +253,9 @@ export function SubmitButton({
       aria-disabled={pending}
       disabled={!settingsChangeFlag}
     >
-      {pending ? 'Updating' : 'Update'}
+      {pending
+        ? 'Updating Notification Settings'
+        : 'Update Notification Settings'}
     </button>
   );
 }

@@ -1,4 +1,5 @@
 import { fetchSafeUser, fetchUserNotificationSettings } from '@/app/lib/data';
+import DeleteAccountDialog from '@/app/ui/settings/delete-account-dialog';
 import EmailNotifForm from '@/app/ui/settings/email-notif-form';
 import ResetPasswordModal from '@/app/ui/settings/reset-password-dialog';
 import { auth } from '@/auth';
@@ -33,7 +34,7 @@ export default async function Page() {
   else resetFlag = false;
 
   return (
-    <main className="mt-8 flex h-[80vh] w-full max-w-[1100px] flex-col justify-start  px-4 text-blue-600 md:py-2">
+    <main className="mt-8 flex h-[90vh] w-full max-w-[1100px] flex-col items-center  px-4 text-blue-600 md:py-2">
       {resetTrue && (
         <div className="mb-4 flex rounded-lg bg-highlight-green p-2">
           <span className="text-small p-2 text-blue-600 ">
@@ -48,31 +49,36 @@ export default async function Page() {
           </span>
         </div>
       )}
-      <div className="flex flex-col ">
-        <h1 className="mb-2 text-lg font-bold">Account Info</h1>
-        <div className="mt-2 flex items-start">
-          <UserIcon className="mt-2 h-8 w-8 text-green-logo" />
-          <div className="ml-6  flex flex-col">
-            <p className="font-semibold">
-              Name: <span className="font-normal"> {userData.username}</span>
-            </p>
-            <p className="font-semibold">
-              Email: <span className="font-normal">{userData.email} </span>
-            </p>
-            {session.user.provider === 'credentials' && (
-              <ResetPasswordModal
-                userData={userData}
-                resetFormOpen={resetFlag}
-              />
-            )}
+      <div>
+        <div className="flex flex-col ">
+          <h1 className="mb-2 text-lg font-bold">Account Info</h1>
+          <div className="mt-2 flex items-start">
+            <UserIcon className="mt-2 h-8 w-8 text-green-logo" />
+            <div className="ml-6  flex flex-col">
+              <p className="font-semibold">
+                Name: <span className="font-normal"> {userData.username}</span>
+              </p>
+              <p className="font-semibold">
+                Email: <span className="font-normal">{userData.email} </span>
+              </p>
+              <div className="flex">
+                {session.user.provider === 'credentials' && (
+                  <ResetPasswordModal
+                    userData={userData}
+                    resetFormOpen={resetFlag}
+                  />
+                )}
+                <DeleteAccountDialog userData={userData} />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <EmailNotifForm
-        email={userData.email}
-        notificationSettings={notificationSettings}
-      />
+        <EmailNotifForm
+          email={userData.email}
+          notificationSettings={notificationSettings}
+        />
+      </div>
     </main>
   );
 }

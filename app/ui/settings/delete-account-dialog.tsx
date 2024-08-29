@@ -2,22 +2,14 @@
 import { useState, Fragment, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import ResetPasswordForm from './reset-password-form';
 import { SafeUser } from '@/app/lib/definitions';
 
-export default function ResetPasswordModal({
+export default function DeleteAccountDialog({
   userData,
-  resetFormOpen,
 }: {
   userData: SafeUser;
-  resetFormOpen: boolean;
 }) {
   let [isOpen, setIsOpen] = useState(false);
-  useEffect(() => {
-    if (resetFormOpen) {
-      closeModal();
-    }
-  }, [resetFormOpen]);
 
   function closeModal() {
     setIsOpen(false);
@@ -29,15 +21,14 @@ export default function ResetPasswordModal({
 
   return (
     <>
-      <div className=" flex ">
+      <div className=" flex">
         <button
           type="button"
           onClick={openModal}
-          className=" whitespace-nowrap text-xs text-blue-600 underline  hover:text-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+          className=" inline whitespace-nowrap text-xs text-blue-600 underline  hover:text-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
         >
-          Reset my password
+          Delete my account
         </button>
-        <p className="mx-2 inline"> | </p>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -68,17 +59,13 @@ export default function ResetPasswordModal({
                 <Dialog.Panel className="fixed flex h-full w-full flex-col bg-white px-4 py-1 text-left  align-middle sm:h-auto sm:max-w-xl sm:rounded-xl  ">
                   <div className="mb-2 mt-4 flex items-center ">
                     <h1 className="text-lg font-bold  text-gray-900">
-                      Reset Your Password
+                      Delete My Account
                     </h1>
                     <XMarkIcon
                       className="ml-auto  h-5 w-5"
                       onClick={closeModal}
                     />
                   </div>
-                  <ResetPasswordForm
-                    email={userData.email}
-                    closeModal={closeModal}
-                  />
                 </Dialog.Panel>
               </Transition.Child>
             </div>
