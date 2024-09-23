@@ -20,7 +20,7 @@ export default function Page() {
             open-source, tennis meet-up app.
             <br />
             </p>
-           <ul>
+           <ul classname="list-disc ml-4">
   <li>Having trouble finding a hitting partner at your level who shares your schedule?</li>
   <li>Newly hooked on tennis and want to play more than your friends do?</li>
   <li>Just moved to Philly and looking for fellow tennis players?</li>
