@@ -16,7 +16,7 @@ export default function Page() {
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <p className={` text-normal text-gray-800 md:text-lg md:leading-normal`}>
             
-            <strong>Welcome to Court Hub!</strong></br>Philadelphia&apos;s free,
+            <strong>Welcome to Court Hub!</strong><br />Philadelphia&apos;s free,
             open-source, tennis meet-up app.
             <br /> <br />
            <ul>
