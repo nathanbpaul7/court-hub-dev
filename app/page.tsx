@@ -14,16 +14,20 @@ export default function Page() {
       </div>
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={` text-xl text-gray-800 md:text-xl md:leading-normal`}>
+          <p className={` text-normal text-gray-800 md:text-lg md:leading-normal`}>
             
-            <strong>Welcome to Court Hub</strong> Philadelphia&apos;s free,
-            open-source, tennis player directory
+            <strong>Welcome to Court Hub!</strong></br>Philadelphia&apos;s free,
+            open-source, tennis meet-up app.
             <br /> <br />
-            Court Hub is a platform for tennis players to find new hitting
-            partners in their local court community. Whether you&apos;re a
-            seasoned player, a burgeoning addict, or just starting out, Court
-            Hub makes it easy to find and connect with other players near you.
-            Click below to register and start finding new partners today.
+           <ul>
+  <li>Having trouble finding a hitting partner at your level who shares your schedule?</li>
+  <li>Newly hooked on tennis and want to play more than your friends do?</li>
+  <li>Just moved to Philly and looking for fellow tennis players?</li>
+</ul>
+
+<p>
+  Court Hub is here for you! Register below to gain access to our rapidly growing directory of local tennis players at public courts across Philadelphia. Find and message players who match your availability, level, and playing preferences so you can get off this screen and back on the courts!
+</p>
 
           </p>
           <Link
